@@ -151,5 +151,21 @@
 
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+
+    <script>
+    document.getElementById('toggleButton').addEventListener('click', function(event) {
+        event.preventDefault();
+        var englishElements = document.querySelectorAll('.english');
+        var frenchElements = document.querySelectorAll('.francais');
+        
+        englishElements.forEach(function(element) {
+            element.style.display = element.style.display === 'none' ? '' : 'none';
+        });
+        
+        frenchElements.forEach(function(element) {
+            element.style.display = element.style.display === 'none' ? '' : 'none';
+        });
+    });
+    </script>
 </body>
 </html>
