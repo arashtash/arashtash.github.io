@@ -1,4 +1,23 @@
-/* Base Reset */
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select:focus,
+textarea {
+  font-size: 16px;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +31,7 @@ body {
     color: #333;
     scroll-behavior: smooth;
     overflow-x: hidden;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 /* Container Layout */
@@ -434,8 +453,3 @@ html {
 
 
 
-input,
-select,
-textarea {
-    font-size: 16px;
-}
