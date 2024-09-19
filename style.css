@@ -12,6 +12,7 @@ body {
     color: #333;
     scroll-behavior: smooth;
     overflow-x: hidden;
+    font-size: 16px;
 }
 
 /* Container Layout */
