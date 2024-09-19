@@ -47,6 +47,9 @@ document.getElementById('toggleCourses').addEventListener('click', function() {
     this.textContent = isHidden ? 'Show Less' : 'View All';
 });
 
-if (navigator.userAgent.includes('iPhone')) {
-    document.querySelector('meta[name="viewport"]').setAttribute("content", "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no");
+if(navigator.userAgent.indexOf('iPhone') > -1 )
+{
+    document
+      .querySelector("[name=viewport]")
+      .setAttribute("content","width=device-width, initial-scale=1, maximum-scale=1");
 }
