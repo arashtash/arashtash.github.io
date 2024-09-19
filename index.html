@@ -1,44 +1,189 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-	<title>Arash Tashakori</title>
-    <link rel="stylesheet" href="./index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arash Tashakori</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" href="icon.jpeg" type="image/icon type">
-    
+
 
 </head>
+</head>
 <body>
-    <div class="header">
-        <h1>Arash Tashakori</h1>
-        <h3 class="english">Computer Science Student at <a href="https://www.dal.ca" target=_self>Dalhousie University</a></h3>
+    <div class="container">
+        <!-- Left Sidebar (Navigation) -->
+        <aside class="sidebar">
+            <h1 class="brand">Arash Tashakori</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- About Section -->
+            <section id="about">
+                <h2>About Me</h2>
+                <p>
+                    Dedicated Fourth-year Computer Science student at Dalhousie University, specializing in Artificial Intelligence and Intelligent Systems. With a strong foundation in mathematics, I excel in problem-solving and critical thinking, which I apply to programming and software development. I am proficient in various programming languages, tools, libraries, frameworks and many different areas of Computer Science from Software Development and Database Design to AI and Data Science.
+                </p>
+                <p>I have successfully completed multiple internships involving Software and Web Development, as well as Deep Learning, Natural Language Processing, and Generative AI. Through my studies at Dalhousie University and internship positions, I have developed a versatile skill set and the ability to quickly learn and adapt to new technologies. I thrive in both team environments and individual settings and enjoy collaborating with others to achieve common goals. I am committed to continuous learning and growth, both as a developer and as a collaborator.</p>
+                <p>Outside of my work and studies, I enjoy playing the piano, video games, and hiking.</p>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills">
+                <h2>Skills</h2>
+                <div class="technical-skills">
+                    <h3>Technical Skills</h3>
+                    <p>Software Development, Web Development, Data Structures, Algorithm Design, Database Design, User Interface Design, Machine Learning, Data Mining, Generative AI, Natural Language Processing, Object Oriented Programming, Test-Driven Development, Software Testing, Agile Methodologies</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill">
+                        <h3>Programming Languages</h3>
+                        <p>Java, Python, C, C#, HTML, CSS, JavaScript</p>
+                    </div>
+                    <div class="skill">
+                        <h3>Libraries</h3>
+                        <p>React, Node.JS, Spring Boot, JUnit, HTTPClient, NumPy, PyTorch, Pandas, Unity</p>
+                    </div>
+                    <div class="skill">
+                        <h3>Tools</h3>
+                        <p>Git, Figma, Linux, Google Cloud, Microsoft Office, MySQL Workbench, Visual Studio, Google Colab</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <div class="education-header">
+                        <h3><img src="dalhousie-logo.png" alt="Dalhousie University Logo" class="university-logo"> Dalhousie University</h3>
+                        <p class="gpa">GPA: 3.85/4.00</p>
+                    </div>
+                    <p>Bachelor of Computer Science (2020 - 2025)</p>
+
+                    <h4>Courses</h4>
+                    <div class="courses-grid" id="courseList">
+                        <div class="course-item">Software Engineering</div>
+                        <div class="course-item">Web Design and Development</div>
+                        <div class="course-item">Machine Learning</div>
+                        <div class="course-item">Data Mining and Warehousing</div>
+                        <div class="course-item">Natural Language Processing</div>
+                        <div class="course-item">Game Design and Development</div>
+                        <div class="course-item hidden">Designing User Interfaces</div>
+                        <div class="course-item hidden">Algorithm Design</div>
+                        <div class="course-item hidden">Data Structures and Algorithms</div>
+                        <div class="course-item hidden">Network Computing</div>
+                        <div class="course-item hidden">Systems Programming</div>
+                        <div class="course-item hidden">Database Systems</div>
+                        <div class="course-item hidden">Discrete Math for CS</div>
+                        <div class="course-item hidden">Calculus 1</div>
+                        <div class="course-item hidden">Probability and Statistics</div>
+                        <div class="course-item hidden">Matrix Theory and Linear Algebra</div>
+                        <div class="course-item hidden">Theoretical Computer Science</div>
+                        <div class="course-item hidden">Workplace Communications</div>
+                    </div>
+                    <div class="button-container">
+                        <button id="toggleCourses" class="view-more-btn">View All</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience">
+                <h2>Experience</h2>
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>Generative AI Extern</h3>
+                        <p>Cognizant</p>
+                        <p class="date">06/2024 - 08/2024</p>
+                    </div>
+                    <p>Completed projects focusing on software development with Python, deep learning and natural language processing, using pre-trained models and enhancing sequence classification accuracy through model fine-tuning.</p>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>Software Developer Intern</h3>
+                        <p>AloDoctor</p>
+                        <p class="date">05/2022 - 08/2022</p>
+                    </div>
+                    <p>Worked on enhancing a healthcare platform’s functionality and user experience through implementing new features and ensuring responsiveness. Collaborated with a team of software developers, utilizing Agile methodologies for iterative improvements.</p>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>Web Developer Intern</h3>
+                        <p>Sharif University of Technology</p>
+                        <p class="date">06/2024 - 08/2024</p>
+                    </div>
+                    <p>Designed, developed, and maintained a responsive and user-friendly website for a university professor.</p>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects">
+                <h2>Selected Projects</h2>
+            
+                <div class="project-card">
+                    <h3>Boardify</h3>
+                    <p>A collaborative list-sharing web app developed using React.js, Spring Boot, and MySQL, supporting user registration and authentication, workspace, board and task creation, assigning users to workspaces, modifying task status and task filtering and searching.</p>
+                </div>
+            
+                <div class="project-card">
+                    <h3>Scheme Interpreter</h3>
+                    <p>A Java-based interpreter for Scheme programming language, supporting all the common Scheme operations including recursion and lambda expressions.</p>
+                </div>
+            
+                <div class="project-card">
+                    <h3>Applying Lightweight Fine-Tuning to a Foundation Model</h3>
+                    <p>Used Hugging Face's PEFT library to fine-tune the GPT-2 model for text classification using Python and PyTorch, optimizing the model through targeted fine-tuning to enhance accuracy.</p>
+                </div>
+
+                <!-- View More Projects Button -->
+                <div class="button-container">
+                    <a href="https://github.com/arashtash?tab=repositories" class="view-more-btn">View More Projects</a>
+                </div>
+            </section>
+
+            <!-- Resume Section -->
+            <section id="resume">
+                <h2>Resume</h2>
+                <div class="resume-download">
+                    <a href="resume.pdf" download class="download-btn">Download Resume</a>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact">
+                <h2>Connect with Me</h2>
+                <div class="social-icons">
+                    <a href="https://linkedin.com/in/arashtashakori" target="_blank" class="social-icon">
+                        <img src="linkedin-icon.png" alt="LinkedIn" class="icon-image">
+                    </a>
+                    <a href="https://github.com/arashtash" target="_blank" class="social-icon">
+                        <img src="github-icon.png" alt="GitHub" class="icon-image">
+                    </a>
+                    <a href="https://psnprofiles.com/arashtkr" target="_blank" class="social-icon">
+                        <img src="psn-icon.png" alt="PlayStation" class="icon-image">
+                    </a>
+                </div>
+            </section>
+
+
+        </main>
     </div>
-	<div> <h2>This page is under construction</h2></div>
-    
 
-    <footer class="footer">
-        <div id="copyright">© 2024 Arash Tashakori </div>
-        <div class="designedby english">Designed by <a href="https://artash.ca/">Arash Tashakori</a></div>
-    </footer>
-
-
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
-
-    <script>
-    document.getElementById('toggleButton').addEventListener('click', function(event) {
-        event.preventDefault();
-        var englishElements = document.querySelectorAll('.english');
-        var frenchElements = document.querySelectorAll('.francais');
-        
-        englishElements.forEach(function(element) {
-            element.style.display = element.style.display === 'none' ? '' : 'none';
-        });
-        
-        frenchElements.forEach(function(element) {
-            element.style.display = element.style.display === 'none' ? '' : 'none';
-        });
-    });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
