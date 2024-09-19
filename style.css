@@ -286,15 +286,19 @@ body {
 }
 
 .experience-header {
+    align-items: flex-start;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .date {
     font-weight: bold;
     font-size: 1rem;
     color: #007acc;
+    white-space: nowrap;
 }
 
 
@@ -340,6 +344,15 @@ html {
 
     .nav ul li {
         margin: 10px 5px;
+    }
+
+    .experience-header {
+        flex-direction: column; /* Stack elements vertically on mobile */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .date {
+        width: 100%; /* Ensure the date takes the full width */
     }
 }
 
@@ -416,4 +429,12 @@ html {
 
 .social-icon .fa-playstation {
     color: #003087;
+}
+
+
+
+input,
+select,
+textarea {
+    font-size: 16px;
 }
