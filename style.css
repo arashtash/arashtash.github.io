@@ -18,6 +18,21 @@ textarea {
 }
 
 
+
+:root {
+    --primary-color: #007aff; 
+    --secondary-color: #ffea05;
+    --hover-color: #005b99;
+}
+
+.tritanopia {
+    --primary-color: #00aa00;
+    --secondary-color: #ff5500;
+    --hover-color: #007d00;
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -34,14 +49,14 @@ body {
     font-size: 16px;
 }
 
-/* Container Layout */
+/*container Layout */
 .container {
     display: grid;
     grid-template-columns: 1fr 3fr;
     min-height: 100vh;
 }
 
-/* Sidebar */
+/*sidebar*/
 .sidebar {
     background-color: #333;
     color: white;
@@ -56,19 +71,12 @@ body {
     animation: slideInLeft 1s ease-out;
 }
 
-@keyframes slideInLeft {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
 
-.brand {
+
+.arash {
     font-size: 2rem;
     margin-bottom: 30px;
-    color: #ffcb05;
+    color: var(--secondary-color);
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
@@ -112,7 +120,7 @@ body {
 }
 
 .nav ul li a:hover {
-    background-color: #ffcb05;
+    background-color: var(--secondary-color);
     color: #333;
     transform: translateX(5px);
 }
@@ -127,7 +135,7 @@ body {
 .main-content h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #007acc;
+    color: var(--primary-color);
     text-transform: uppercase;
     letter-spacing: 1.5px;
     opacity: 0;
@@ -141,7 +149,7 @@ body {
     line-height: 1.8;
 }
 
-/* Animate sections when they scroll into view */
+/* Animate sections when they scroll into view*/
 .reveal {
     opacity: 1 !important;
     transform: translateY(0) !important;
@@ -166,7 +174,7 @@ body {
 .technical-skills h3 {
     font-size: 1.8rem;
     margin-bottom: 15px;
-    color: #007acc;
+    color: var(--primary-color);
     text-transform: uppercase;
 }
 
@@ -175,7 +183,7 @@ body {
     line-height: 1.8;
 }
 
-/* Skills Grid (For Languages, Libraries, Tools) */
+/*Skills Grid (For Languages, Libraries, Tools) */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -195,14 +203,14 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* University Logo Styling */
+/*University Logo Styling*/
 .university-logo {
     width: 30px;
     margin-right: 10px;
     vertical-align: middle;
 }
 
-/* Education Header with GPA */
+/*Education Header with GPA */
 .education-header {
     display: flex;
     justify-content: space-between;
@@ -218,10 +226,10 @@ body {
 .gpa {
     font-weight: bold;
     font-size: 1.2rem;
-    color: #007acc;
+    color: var(--primary-color);
 }
 
-/* Smaller "Courses" title */
+/*smaller courses title */
 .education-item h4 {
     font-size: 1.5rem;
     margin-top: 20px;
@@ -230,7 +238,7 @@ body {
     letter-spacing: 1.2px;
 }
 
-/* Courses Grid */
+/*Courses Grid */
 .courses-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -260,13 +268,13 @@ body {
 
 /* View More/Less button */
 .button-container {
-    text-align: center; /* Center the button */
+    text-align: center; 
 }
 
 .view-more-btn {
     margin-top: 15px;
     padding: 10px 15px;
-    background-color: #007acc;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     border-radius: 5px;
@@ -276,7 +284,7 @@ body {
 }
 
 .view-more-btn:hover {
-    background-color: #005b99;
+    background-color: var(--hover-color);
 }
 
 /* Education Section */
@@ -317,7 +325,7 @@ body {
 .date {
     font-weight: bold;
     font-size: 1rem;
-    color: #007acc;
+    color: var(--primary-color);
     white-space: nowrap;
 }
 
@@ -340,7 +348,7 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Smooth scrolling for the navigation */
+/* smooth scrolling for the navigation */
 html {
     scroll-behavior: smooth;
 }
@@ -367,12 +375,12 @@ html {
     }
 
     .experience-header {
-        flex-direction: column; /* Stack elements vertically on mobile */
+        flex-direction: column; /* put elements vertically on mobile */
         align-items: flex-start; /* Align items to the start */
     }
 
     .date {
-        width: 100%; /* Ensure the date takes the full width */
+        width: 100%; /* make sure the date takes the full width */
     }
 }
 
@@ -390,7 +398,7 @@ html {
 
 .download-btn {
     padding: 10px 20px;
-    background-color: #007acc;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     border-radius: 10px;
@@ -399,7 +407,7 @@ html {
 }
 
 .download-btn:hover {
-    background-color: #005b99;
+    background-color: var(--hover-color);
 }
 
 /* Contact Section */
@@ -449,6 +457,226 @@ html {
 
 .social-icon .fa-playstation {
     color: #003087;
+}
+
+
+
+
+
+
+/* Hidden initially */
+.hidden {
+    display: none;
+}
+
+/* Animation for sliding */
+.slide-out-left {
+    animation: slideOutLeft 0.8s forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.8s forwards;
+}
+
+.slide-out-right {
+    animation: slideOutRight 0.8s forwards;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.8s forwards;
+}
+
+@keyframes slideOutLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+/* Full Project Page Styling */
+.projects-page {
+    background-color: #f0f4f8;
+    padding: 50px 20px;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-page h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Styling for the list of projects on the full projects page */
+.projects-list {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto; 
+}
+
+/* Styling for each project item in the full projects page */
+.project-item-full {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+}
+
+.project-item-full:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+}
+
+.project-header {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.project-description {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Back button styling */
+.button-container {
+    margin-top: 40px;
+}
+
+.view-more-btn {
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-more-btn:hover {
+    background-color: var(--hover-color);
+}
+
+.project-description p {
+    margin-bottom: 15px; 
+    line-height: 1.6; 
+}
+
+
+@media (max-width: 768px) {
+    .projects-list {
+        grid-template-columns: 1fr; 
+    }
+
+    .project-item-full {
+        padding: 20px;
+    }
+}
+
+
+
+footer {
+    background-color: #333; 
+    color: white; 
+    text-align: center; 
+    padding: 10px 0; 
+    font-size: 0.9rem; 
+    position: relative; 
+    width: 100%;
+    bottom: 0;
+    margin-top: 40px;
+}
+
+
+
+.colorblind-options {
+    margin: 20px;
+    text-align: center;
+}
+
+.colorblind-circle {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.colorblind-circle.default {
+    background-color: #007aff;
+    border: 3px solid #ffea05;
+}
+
+.colorblind-circle.red-green {
+    background-color: #00aa00;
+    border: 3px solid #ff5500;
+}  
+
+.colorblind-circle:hover {
+    transform: scale(1.1); /*  zoom */
+}
+
+.colorblind-circle:focus {
+    outline: 2px solid #000;
 }
 
 
