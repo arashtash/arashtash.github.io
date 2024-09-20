@@ -13,180 +13,366 @@
 </head>
 </head>
 <body>
-    <div class="container">
-        <!-- Left Sidebar (Navigation) -->
-        <aside class="sidebar">
-            <h1 class="brand">Arash Tashakori</h1>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </aside>
+    <div id="fullPageContent">
+        <div class="container">
+            <!-- Left Sidebar (Navigation) -->
+            <aside class="sidebar">
+                <h1 class="arash">Arash Tashakori</h1>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#resume">Resume</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </aside>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <!-- About Section -->
-            <section id="about">
-                <h2>About Me</h2>
-                <p>
-                    Dedicated Fourth-year Computer Science student at Dalhousie University, specializing in Artificial Intelligence and Intelligent Systems. With a strong foundation in mathematics, I excel in problem-solving and critical thinking, which I apply to programming and software development. I am proficient in various programming languages, tools, libraries, frameworks and many different areas of Computer Science from Software Development and Database Design to AI and Data Science.
-                </p>
-                <p>I have successfully completed multiple internships involving Software and Web Development, as well as Deep Learning, Natural Language Processing, and Generative AI. Through my studies at Dalhousie University and internship positions, I have developed a versatile skill set and the ability to quickly learn and adapt to new technologies. I thrive in both team environments and individual settings and enjoy collaborating with others to achieve common goals. I am committed to continuous learning and growth, both as a developer and as a collaborator.</p>
-                <p>Outside of my work and studies, I enjoy playing the piano, video games, and hiking.</p>
-            </section>
+            <!-- Main Content -->
+            <main class="main-content">
 
-            <!-- Skills Section -->
-            <section id="skills">
-                <h2>Skills</h2>
-                <div class="technical-skills">
-                    <h3>Technical Skills</h3>
-                    <p>Software Development, Web Development, Data Structures, Algorithm Design, Database Design, User Interface Design, Machine Learning, Data Mining, Generative AI, Natural Language Processing, Object Oriented Programming, Test-Driven Development, Software Testing, Agile Methodologies</p>
+                <div class="colorblind-options">
+                    <div id="defaultMode" class="colorblind-circle default"></div>
+                    <div id="tritanopiaMode" class="colorblind-circle red-green"></div>
                 </div>
-                <div class="skills-grid">
-                    <div class="skill">
-                        <h3>Programming Languages</h3>
-                        <p>Java, Python, C, C#, HTML, CSS, JavaScript</p>
-                    </div>
-                    <div class="skill">
-                        <h3>Libraries</h3>
-                        <p>React, Node.JS, Spring Boot, JUnit, HTTPClient, NumPy, PyTorch, Pandas, Unity</p>
-                    </div>
-                    <div class="skill">
-                        <h3>Tools</h3>
-                        <p>Git, Figma, Linux, Google Cloud, Microsoft Office, MySQL Workbench, Visual Studio, Google Colab</p>
-                    </div>
-                </div>
-            </section>
+                <!-- About Section -->
+                <section id="about">
+                    <h2>About Me</h2>
+                    <p>
+                        Dedicated Fourth-year Computer Science student at Dalhousie University, specializing in Artificial Intelligence and Intelligent Systems. With a strong foundation in mathematics, I excel in problem-solving and critical thinking, which I apply to programming and software development. I am proficient in various programming languages, tools, libraries, frameworks and many different areas of Computer Science from Software Development and Database Design to AI and Data Science.
+                    </p>
+                    <p>I have successfully completed multiple internships involving Software and Web Development, as well as Deep Learning, Natural Language Processing, and Generative AI. Through my studies at Dalhousie University and internship positions, I have developed a versatile skill set and the ability to quickly learn and adapt to new technologies. I thrive in both team environments and individual settings and enjoy collaborating with others to achieve common goals. I am committed to continuous learning and growth, both as a developer and as a collaborator.</p>
+                    <p>Outside of my work and studies, I enjoy playing the piano, video games, and hiking.</p>
+                </section>
 
-            <!-- Education Section -->
-            <section id="education">
-                <h2>Education</h2>
-                <div class="education-item">
-                    <div class="education-header">
-                        <h3><img src="dalhousie-logo.png" alt="Dalhousie University Logo" class="university-logo"> Dalhousie University</h3>
-                        <p class="gpa">GPA: 3.85/4.00</p>
+                <!-- Skills Section -->
+                <section id="skills">
+                    <h2>Skills</h2>
+                    <div class="technical-skills">
+                        <h3>Technical Skills</h3>
+                        <p>Software Development, Web Development, Data Structures, Algorithm Design, Database Design, User Interface Design, Machine Learning, Data Mining, Generative AI, Natural Language Processing, Object Oriented Programming, Test-Driven Development, Software Testing, Agile Methodology</p>
                     </div>
-                    <p>Bachelor of Computer Science (2020 - 2025)</p>
+                    <div class="skills-grid">
+                        <div class="skill">
+                            <h3>Programming Languages</h3>
+                            <p>Java, Python, C, C#, HTML, CSS, JavaScript</p>
+                        </div>
+                        <div class="skill">
+                            <h3>Libraries</h3>
+                            <p>React, Node.JS, Spring Boot, JUnit, HTTPClient, NumPy, PyTorch, Pandas, Unity</p>
+                        </div>
+                        <div class="skill">
+                            <h3>Tools</h3>
+                            <p>Git, Figma, Linux, Google Cloud, Microsoft Office, MySQL Workbench, Visual Studio, Google Colab</p>
+                        </div>
+                    </div>
+                </section>
 
-                    <h4>Courses</h4>
-                    <div class="courses-grid" id="courseList">
-                        <div class="course-item">Software Engineering</div>
-                        <div class="course-item">Web Design and Development</div>
-                        <div class="course-item">Machine Learning</div>
-                        <div class="course-item">Data Mining and Warehousing</div>
-                        <div class="course-item">Natural Language Processing</div>
-                        <div class="course-item">Game Design and Development</div>
-                        <div class="course-item hidden">Designing User Interfaces</div>
-                        <div class="course-item hidden">Algorithm Design</div>
-                        <div class="course-item hidden">Data Structures and Algorithms</div>
-                        <div class="course-item hidden">Network Computing</div>
-                        <div class="course-item hidden">Systems Programming</div>
-                        <div class="course-item hidden">Database Systems</div>
-                        <div class="course-item hidden">Discrete Math for CS</div>
-                        <div class="course-item hidden">Calculus 1</div>
-                        <div class="course-item hidden">Probability and Statistics</div>
-                        <div class="course-item hidden">Matrix Theory and Linear Algebra</div>
-                        <div class="course-item hidden">Theoretical Computer Science</div>
-                        <div class="course-item hidden">Workplace Communications</div>
+                <!-- Education Section -->
+                <section id="education">
+                    <h2>Education</h2>
+                    <div class="education-item">
+                        <div class="education-header">
+                            <h3><img src="dalhousie-logo.png" alt="Dalhousie University Logo" class="university-logo"> Dalhousie University</h3>
+                            <p class="gpa">GPA: 3.85/4.00</p>
+                        </div>
+                        <p>Bachelor of Computer Science (2020 - 2025)</p>
+
+                        <h4>Courses</h4>
+                        <div class="courses-grid" id="courseList">
+                            <div class="course-item">Software Engineering</div>
+                            <div class="course-item">Web Design and Development</div>
+                            <div class="course-item">Machine Learning</div>
+                            <div class="course-item">Data Mining and Warehousing</div>
+                            <div class="course-item">Natural Language Processing</div>
+                            <div class="course-item">Game Design and Development</div>
+                            <div class="course-item hidden">Designing User Interfaces</div>
+                            <div class="course-item hidden">Algorithm Design</div>
+                            <div class="course-item hidden">Data Structures and Algorithms</div>
+                            <div class="course-item hidden">Network Computing</div>
+                            <div class="course-item hidden">Systems Programming</div>
+                            <div class="course-item hidden">Database Systems</div>
+                            <div class="course-item hidden">Discrete Math for CS</div>
+                            <div class="course-item hidden">Calculus 1</div>
+                            <div class="course-item hidden">Probability and Statistics</div>
+                            <div class="course-item hidden">Matrix Theory and Linear Algebra</div>
+                            <div class="course-item hidden">Theoretical Computer Science</div>
+                            <div class="course-item hidden">Workplace Communications</div>
+                        </div>
+                        <div class="button-container">
+                            <button id="toggleCourses" class="view-more-btn">View All</button>
+                        </div>
                     </div>
+                </section>
+
+                <!-- Experience Section -->
+                <section id="experience">
+                    <h2>Experience</h2>
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3>Generative AI Extern</h3>
+                            <p>Cognizant</p>
+                            <p class="date">06/2024 - 08/2024</p>
+                        </div>
+                        <p>Completed projects focusing on software development with Python, deep learning and natural language processing, using pre-trained models and enhancing sequence classification accuracy through model fine-tuning.</p>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3>Software Developer Intern</h3>
+                            <p>AloDoctor</p>
+                            <p class="date">05/2022 - 08/2022</p>
+                        </div>
+                        <p>Worked on enhancing a healthcare platform’s functionality and user experience through implementing new features and ensuring responsiveness. Collaborated with a team of software developers, utilizing Agile Methodology for iterative improvements.</p>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3>Web Developer Intern</h3>
+                            <p>Sharif University of Technology</p>
+                            <p class="date">06/2024 - 08/2024</p>
+                        </div>
+                        <p>Designed, developed, and maintained a responsive and user-friendly website for a university professor.</p>
+                    </div>
+                </section>
+
+                <!-- Projects Section -->
+                <section id="projects">
+                    <h2>Selected Projects</h2>
+                
+                    <div class="project-card">
+                        <h3>Boardify</h3>
+                        <p>A collaborative list-sharing web app developed using React.js, Spring Boot, and MySQL, supporting user registration and authentication, workspace, board and task creation, assigning users to workspaces, modifying task status and task filtering and searching.</p>
+                    </div>
+                
+                    <div class="project-card">
+                        <h3>Scheme Interpreter</h3>
+                        <p>A Java-based interpreter for Scheme programming language, supporting all the common Scheme operations including recursion and lambda expressions.</p>
+                    </div>
+                
+                    <div class="project-card">
+                        <h3>Applying Lightweight Fine-Tuning to a Foundation Model</h3>
+                        <p>Used Hugging Face's PEFT library to fine-tune the GPT-2 model for text classification using Python and PyTorch, optimizing the model through targeted fine-tuning to enhance accuracy.</p>
+                    </div>
+
+                    <!-- View More Projects Button -->
                     <div class="button-container">
-                        <button id="toggleCourses" class="view-more-btn">View All</button>
+                        <button id="viewMoreProjects" class="view-more-btn">View More Projects</button>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- Experience Section -->
-            <section id="experience">
-                <h2>Experience</h2>
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3>Generative AI Extern</h3>
-                        <p>Cognizant</p>
-                        <p class="date">06/2024 - 08/2024</p>
+                <!-- Resume Section -->
+                <section id="resume">
+                    <h2>Resume</h2>
+                    <div class="resume-download">
+                        <a href="resume.pdf" download class="download-btn">Download Resume</a>
                     </div>
-                    <p>Completed projects focusing on software development with Python, deep learning and natural language processing, using pre-trained models and enhancing sequence classification accuracy through model fine-tuning.</p>
-                </div>
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3>Software Developer Intern</h3>
-                        <p>AloDoctor</p>
-                        <p class="date">05/2022 - 08/2022</p>
+                </section>
+
+                <!-- Contact Section -->
+                <section id="contact">
+                    <h2>Connect with Me</h2>
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/in/arashtashakori" target="_blank" class="social-icon">
+                            <img src="linkedin-icon.png" alt="LinkedIn" class="icon-image">
+                        </a>
+                        <a href="https://github.com/arashtash" target="_blank" class="social-icon">
+                            <img src="github-icon.png" alt="GitHub" class="icon-image">
+                        </a>
+                        <a href="https://psnprofiles.com/arashtkr" target="_blank" class="social-icon">
+                            <img src="psn-icon.png" alt="PlayStation" class="icon-image">
+                        </a>
+                        <a href="mailto: arashtashakori11@gmail.com" target="_blank" class="social-icon">
+                            <img src="gmail-icon.png" alt="Gmail" class="icon-image">
+                        </a>
                     </div>
-                    <p>Worked on enhancing a healthcare platform’s functionality and user experience through implementing new features and ensuring responsiveness. Collaborated with a team of software developers, utilizing Agile methodologies for iterative improvements.</p>
-                </div>
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3>Web Developer Intern</h3>
-                        <p>Sharif University of Technology</p>
-                        <p class="date">06/2024 - 08/2024</p>
-                    </div>
-                    <p>Designed, developed, and maintained a responsive and user-friendly website for a university professor.</p>
-                </div>
-            </section>
-
-            <!-- Projects Section -->
-            <section id="projects">
-                <h2>Selected Projects</h2>
-            
-                <div class="project-card">
-                    <h3>Boardify</h3>
-                    <p>A collaborative list-sharing web app developed using React.js, Spring Boot, and MySQL, supporting user registration and authentication, workspace, board and task creation, assigning users to workspaces, modifying task status and task filtering and searching.</p>
-                </div>
-            
-                <div class="project-card">
-                    <h3>Scheme Interpreter</h3>
-                    <p>A Java-based interpreter for Scheme programming language, supporting all the common Scheme operations including recursion and lambda expressions.</p>
-                </div>
-            
-                <div class="project-card">
-                    <h3>Applying Lightweight Fine-Tuning to a Foundation Model</h3>
-                    <p>Used Hugging Face's PEFT library to fine-tune the GPT-2 model for text classification using Python and PyTorch, optimizing the model through targeted fine-tuning to enhance accuracy.</p>
-                </div>
-
-                <!-- View More Projects Button -->
-                <div class="button-container">
-                    <a href="https://github.com/arashtash?tab=repositories" class="view-more-btn">View More Projects</a>
-                </div>
-            </section>
-
-            <!-- Resume Section -->
-            <section id="resume">
-                <h2>Resume</h2>
-                <div class="resume-download">
-                    <a href="resume.pdf" download class="download-btn">Download Resume</a>
-                </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact">
-                <h2>Connect with Me</h2>
-                <div class="social-icons">
-                    <a href="https://linkedin.com/in/arashtashakori" target="_blank" class="social-icon">
-                        <img src="linkedin-icon.png" alt="LinkedIn" class="icon-image">
-                    </a>
-                    <a href="https://github.com/arashtash" target="_blank" class="social-icon">
-                        <img src="github-icon.png" alt="GitHub" class="icon-image">
-                    </a>
-                    <a href="https://psnprofiles.com/arashtkr" target="_blank" class="social-icon">
-                        <img src="psn-icon.png" alt="PlayStation" class="icon-image">
-                    </a>
-                    <a href="mailto: arashtashakori11@gmail.com" target="_blank" class="social-icon">
-                        <img src="gmail-icon.png" alt="Gmail" class="icon-image">
-                    </a>
-                </div>
-            </section>
+                </section>
 
 
-        </main>
+            </main>
+        </div>
     </div>
 
+
+
+    <section id="projectsPage" class="hidden">
+        <!-- Back Button to go to the original content -->
+        <div class="button-container">
+            <button id="backToFullPage" class="view-more-btn">Back to the Main Page</button>
+        </div>
+        <h2>List of Completed Projects</h2>
+
+        <div class="projects-list">
+            <div class="project-item-full">
+                <div class="project-header">
+                    <h3>Boardify</h3>
+                </div>
+                <div class="project-description">
+                    <p>Boardify is a list-sharing web application, inspired by Trello, developed collaboratively with two teammates as part of our Software Engineering course at Dalhousie University. The project involved rotating roles among team members, with each person contributing to both frontend and backend development, and taking turns in leadership roles weekly. We utilized Agile Methodology, delivering the project in iterative milestones, ensuring the application was always functional and presentable. Continuous improvements were made based on feedback from our instructor and teaching assistants, with each sprint introducing new features and refinements.</p>
+                    <p>Boardify was developed using React.js (JavaScript library), Spring Boot (Java framework), SQL and Git (for version control) in a Test-Driven Development (TDD) process, with over 70% testing line coverage. The implemented features are user registration, authentication (Login), creating workspaces and adding users to them, creating boards and adding tasks within them, updating task status and searching and filtering tasks.</p>
+                    <a href="https://github.com/arashtash/Boardify" target="_blank">Boardify's code on GitHub.</a>
+                    <p><strong>Keywords</strong>: JavaScript, React.js, Java, Spring Boot, MySQL, Agile Methodology, Full-Stack Development, Team Collaboration, Test-Driven Development, Object-Oriented Programming</p>
+                </div>
+            </div>
+
+            <div class="project-item-full">
+                <div class="project-header">
+                    <h3>Scheme Interpreter</h3>
+                </div>
+                <div class="project-description">
+                    <p>Developed a comprehensive interpreter for the Scheme programming language using Java, implementing essential features such as lambda expressions, conditionals, list manipulation, and logic and arithmetic operations.</p>
+                    <p>Utilized object-oriented principles to ensure modularity and maintainability of the codebase. Followed a test-driven development approach, implementing rigorous unit and integration testing to guarantee high-quality and reliable functionality. Designed and built a custom parser, tokenizer, and evaluator to process and evaluate complex, nested Scheme expressions, recursive calls and lists, providing a robust solution for handling Scheme language operations.</p>
+                    <a href="https://github.com/arashtash/Scheme_interpreter" target="_blank">My Scheme Interpreter's code on GitHub.</a>
+                    <p><strong>Keywords</strong>: Java, Scheme, JUnit, Test-Driven Development, Object-Oriented Programming</p>
+                    
+                </div>
+            </div>
+
+            <div class="project-item-full">
+                <div class="project-header">
+                    <h3>Data Mining and Analysis on Multiple Datasets</h3>
+                </div>
+                <div class="project-description">
+                    <p>As part of my Data Mining and Warehousing course, I gained hands-on experience with key aspects of Data Mining, including data preprocessing, OLAP, discretization, and applying machine learning algorithms. I worked with real-world datasets, such as COVID-19 data for Nova Scotia, where I focused on data cleaning, structuring, and analysis. I implemented k-means clustering algorithm from scratch and compared its results with Scikit-learn’s version across multiple datasets. Additionally, I utilized classification models like Naive Bayes and Neural Networks to predict outcomes, using Python and its libraries such as NumPy, Pandas, and Scikit-learn.</p>
+                    <p>I explored OLAP and discretization concepts, applying them to political data from Brazil, and conducted analysis on the health and environmental impacts of seafood consumption. Using datasets related to nutrition and sustainability, I created visualizations to examine trends in protein consumption, fish stock sustainability, and environmental impacts, providing insights into global seafood production and its effects.</p>
+                    <a href="https://github.com/arashtash/Data-Mining-and-Analysis-on-Multiple-Datasets" target="_blank">My Data Mining projects on GitHub.</a>
+                    <p><strong>Keywords</strong>: Python, Data Mining, Machine Learning, Data Analysis, Data Warehousing, Visualization, NumPy, Pandas, Scikit-learn</p>
+                    
+                </div>
+            </div>
+
+            <div class="project-item-full">
+                <div class="project-header">
+                    <h3>Implementation and Application of ML Algorithms</h3>
+                </div>
+                <div class="project-description">
+                    <p>Completed multiple Machine Learning and Data Science projects, focusing on both foundational concepts and advanced techniques. I began by working with probability distributions, calculating expected values, variances, and entropies, followed by generating synthetic datasets and visualizing clusters. I implemented key algorithms such as k-nearest neighbors for classification and K-means clustering, optimizing the number of clusters using the Silhouette Score and visualizing the results.</p>
+                    <p>In addition, I developed and experimented with neural networks for image classification tasks, using datasets such as MNIST and CIFAR-100. I explored different hyperparameters to improve performance and analyzed the generalization of the networks. I also trained convolutional neural networks and implemented a multi-layer perceptron for binary classification. Throughout these tasks, I utilized Python, NumPy, Keras, Matplotlib, and TensorFlow for data manipulation, model development, and evaluation.</p>
+                    <a href="https://github.com/arashtash/Implementation-and-Application-of-ML-Algorithms" target="_blank">My Machine Learning projects on GitHub.</a>
+                    <p><strong>Keywords</strong>: Python, Machine Learning, Data Science, Deep Learning, Artificial Neural Networks, Classification, Clustering, NumPy, Keras, TensorFlow</p>
+                </div>
+            </div>
+
+
+            <div class="project-item-full">
+                <div class="project-header">
+                    <h3>Document Retrieval with Inverted Index</h3>
+                </div>
+                <div class="project-description">
+                    <p>Developed a recipe retrieval system using Python, implementing term-document matrix, inverted index, Jaccard similarly, and TF-IDF retrieval techniques to efficiently search and retrieve recipes.</p>
+                    <p>Built and compared different search methods, including tree-based inverted index and Whoosh library, by evaluating their performance and service latency, demonstrating a strong understanding of fundamental information retrieval concepts and data structures.</p>
+                    <a href="https://github.com/arashtash/Document-Retrieval" target="_blank">My Document Retrieval project on GitHub.</a>
+                    <p><strong>Keywords</strong>: Python, Information Retrieval, Data Science, Data Structures and Algorithms, Scikit-learn, Whoosh</p>
+                </div>
+            </div>
+
+
+            <div class="project-item-full">
+                <div class="project-header">
+                    <h3>Applying Lightweight Fine-Tuning to a Foundation Model</h3>
+                </div>
+                <div class="project-description">
+                    <p>In this project, I fine-tuned a GPT-2 model for sequence classification using Hugging Face's PEFT (Parameter-Efficient Fine-Tuning) library. The project involved training and evaluating the model on the <a href="https://huggingface.co/datasets/climatebert/climate_sentiment" target="_blank">climatebert/climate_sentiment</a> dataset to classify text into categories of "risk," "neutral," or "opportunity." Initially, I conducted an evaluation of the pre-trained GPT-2 model, achieving an accuracy of 36.5%. After applying PEFT using LoRA (Low-Rank Adaptation), I fine-tuned the model, significantly improving its accuracy to 52% over only four epochs.</p>
+                    <p>I implemented and trained both traditional and PEFT models using Python libraries such as NumPy, PyTorch, PEFT and Pandas. This project shows the effectiveness of lightweight fine-tuning for improving model performance while reducing computational complexity.</p>
+                    <a href="https://github.com/arashtash/GPT2-Fine-Tuning" target="_blank">My Sequence Classification project on GitHub.</a>
+                    <p><strong>Keywords</strong>: Python, Generative AI, Sequence Classification, Natural Language Processing, Model Fine-Tuning, NumPy, PyTorch, Pandas, PEFT</p>
+                </div>
+            </div>
+
+            <div class="project-item-full">
+                <div class="project-header">
+                    <h3>Identify Dog Breeds using CNN Image Classifier Models</h3>
+                </div>
+                <div class="project-description">
+                    <p>In this project, I developed an Object-Oriented Python program to classify pet images during my Generative AI Externship at Cognizant, with a focus on identifying whether the images contain a dog, and if so, determining the breed. Using three different Convolutional Neural Network architectures — ResNet, AlexNet, and VGG — I explored the effectiveness of each model in achieving these goals. My program also compared the classifier’s results with actual pet labels, making use of file input and handling various data structures. To enhance the program’s efficiency, I incorporated command-line arguments for user inputs and timed the execution of each model to assess its computational performance.</p>
+                    <p>Through this project, I gained experience in image classification using CNN models and became proficient in evaluating model performance based on accuracy and runtime. I successfully implemented logic to classify images as "dog" or "not dog" using a reference file and achieved accurate breed classification in dog images. The project helped me develop a deeper understanding of the trade-offs between different deep learning model architectures. As a part of my Externship at Cognizant, part of this code (The CNN models themselves) are not mine, therefore I can't share this project on GitHub.</p>
+                    <a href="https://www.udacity.com/certificate/e/9836d42c-2263-11ef-b33b-a73256188265" target="_blank">My certificate of completion of Cognizant's Generative AI Externship.</a>
+                    <p><strong>Keywords</strong>: Python, Object-Oriented Programming, Image Classification, Deep Learning, Model Evaluation, Convolutional Neural Networks</p>
+                </div>
+            </div>
+
+            <div class="project-item-full">
+                <div class="project-header">
+                    <h3>Simulation of Stochastic Hurricane Tracks</h3>
+                </div>
+                <div class="project-description">
+                    <p>In this project, I applied statistical modeling and machine learning techniques to simulate hurricane tracks and intensity in the Atlantic Ocean and the east coast of the United States, under the supervision of <a href="https://www.linkedin.com/in/siamak-daneshvaran/" target="_blank">Dr. Siamak Daneshvaran</a>. Using 100 years of historical data from NOAA, I developed a model that simulates stochastic hurricane tracks and pressure changes, incorporating key atmospheric factors like wind patterns and sea surface temperature.</p>
+                    <p>The project involved deep learning algorithms to predict hurricane paths, and I tested the model against recent hurricanes to evaluate its accuracy. This project was completed using Python, PyTorch, NumPy, Pandas, and Scikit-learn for data processing, model development, and evaluation.</p>
+                    <p><strong>Keywords</strong>: Python, Machine Learning, Deep Learning, Statistical Modeling, NumPy, PyTorch, Pandas, Scikit-learn</p>
+                </div>
+            </div>
+
+            <div class="project-item-full">
+                <div class="project-header">
+                    <h3>UI/UX Design: Keep me on Task</h3>
+                </div>
+                <div class="project-description">
+                    <p>During my User Interface Design course at Dalhousie University, I collaborated with a team of five other CS students to design the user interface of a mobile app aimed at enhancing user productivity. The app featured tools like app usage restrictions, task management via a calendar, and an integrated group chat muting function. We incorporated insights from academic research on productivity apps and user interviews into our design process, continuously refining our approach.</p>
+                    <p>Key achievements include conducting contextual inquiries with students to identify distractions and user needs, analyzing the data using affinity diagramming, and developing a high-fidelity prototype in Figma. We also conducted cognitive walkthroughs with evaluators, iteratively improving the design based on feedback to enhance usability and the overall user experience.</p>
+                    <p><strong>Keywords</strong>: Designing User Interfaces, UI/UX Design, Figma</p>
+                </div>
+            </div>
+
+            <div class="project-item-full">
+                <div class="project-header">
+                    <h3>Java Frogger Game</h3>
+                </div>
+                <div class="project-description">
+                    <p>Developed an object-oriented version of the classic Frogger game using Java and Swing for the graphical user interface. The project involved implementing game logic to manage player movements, obstacles, and collision detection. Demonstrated my proficiency in object-oriented programming principles, as well as my ability to design and create interactive, dynamic game elements using Java.</p>
+                    <a href="https://github.com/arashtash/frogger" target="_blank">Java Frogger Game on GitHub.</a>
+                    <p><strong>Keywords</strong>: Java, Swing, Game Development, Object-Oriented Programming</p>
+                </div>
+            </div>
+
+            <div class="project-item-full">
+                <div class="project-header">
+                    <h3>Java Hangman Game</h3>
+                </div>
+                <div class="project-description">
+                    <p>In this project, I developed a Java-based Hangman game with a graphical user interface using Swing. The game allows players to choose between two word categories (general words or country names) and provides a user-friendly interface for guessing letters. Key features include real-time updates of the game state, input validation, and dynamic display of the player's progress. The game also reads words from external text files, randomly selecting a word for each session. Additionally, it tracks previously guessed letters and displays remaining lives, enhancing user experience through clear feedback.</p>
+                    <a href="https://github.com/arashtash/hangmanJava" target="_blank">Java Hangman Game on GitHub.</a>
+                    <p><strong>Keywords</strong>: Java, Swing, Game Development</p>
+                </div>
+            </div>
+
+            <div class="project-item-full">
+                <div class="project-header">
+                    <h3>Splicer in C</h3>
+                </div>
+                <div class="project-description">
+                    <p>Developed a linked list in C and used it to create a string splicer that reassembles multiple strings by merging their overlapping parts (i.e. the first string's ending matching the second string's beginning). The program reads segments of text, stores them as linked lists, and then reassembles them into a single document based on overlapping content.</p>
+                    <a href="https://github.com/arashtash/splicer" target="_blank">Splicer's code on GitHub.</a>
+                    <p><strong>Keywords</strong>: C, Data Structures</p>
+                </div>
+            </div>
+
+            <div class="project-item-full">
+                <div class="project-header">
+                    <h3>This Website!</h3>
+                </div>
+                <div class="project-description">
+                    <p>This personal portfolio website was designed and developed to highlight my skills, education, and projects as a Computer Science student. Built using HTML, CSS, and JavaScript, it features responsive design, smooth navigation, and animations to enhance user experience. It includes interactive elements like a dynamic project showcase and smooth transitions between views.</p>
+                    <p><strong>Keywords</strong>: HTML, CSS, JavaScript</p>
+                </div>
+            </div>
+
+            
+
+        </div>
+        
+        <div class="button-container">
+            <button id="backToFullPage" class="view-more-btn">Back to the Main Page</button>
+        </div>
+    </section>
+
+
+
+
     <script src="script.js"></script>
+
+    <footer>
+        <p>&copy; 2024 Arash Tashakori. All rights reserved.</p>
+    </footer>
 </body>
 </html>
