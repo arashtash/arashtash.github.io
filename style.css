@@ -158,7 +158,7 @@ body {
     transform: translateY(0) !important;
 }
 
-/* Technical Skills (Full Width Row) */
+/* Technical Skills */
 .technical-skills {
     background-color: #f0f0f0;
     padding: 20px;
@@ -269,7 +269,7 @@ body {
     display: none;
 }
 
-/* View More/Less button */
+/* View More/Less */
 .button-container {
     text-align: center; 
 }
@@ -588,6 +588,16 @@ html {
 }
 
 
+a {
+    color: var(--primary-color); 
+    text-decoration: underline; 
+    transition: color 0.3s ease; 
+}
+
+a:hover {
+    color: var(--hover-color); 
+    text-decoration: underline; 
+}
 
 
 
@@ -595,23 +605,23 @@ html {
 
 
 /* Full Project Page Styling */
-.projects-page {
-    background-color: #f0f4f8;
+#projectsPage {
+    background-color: #f0f0f0;
     padding: 50px 20px;
     min-height: 100vh;
     text-align: center;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.projects-page h2 {
+#projectsPage h2 {
     font-size: 2.5rem;
     color: var(--primary-color);
     margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+    text-align: center;
 }
 
 /* Styling for the list of projects on the full projects page */
@@ -655,7 +665,7 @@ html {
 
 /* Back button styling */
 .button-container {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .view-more-btn {
@@ -737,6 +747,3 @@ footer {
 .colorblind-circle:focus {
     outline: 2px solid #000;
 }
-
-
-
