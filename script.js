@@ -98,6 +98,30 @@ document.getElementById('backToFullPage').addEventListener('click', function() {
     }, 800);
 });
 
+// Handle Back to Full Page Button
+document.getElementById('backToFullPageB').addEventListener('click', function() {
+    const fullPageContent = document.getElementById('fullPageContent');
+    const projectsPage = document.getElementById('projectsPage');
+
+    
+    projectsPage.classList.add('slide-out-right');
+
+    // After the slide-out animation finishes, hide the projects page and show the full page content
+    setTimeout(() => {
+        projectsPage.classList.add('hidden'); 
+        projectsPage.classList.remove('slide-out-right'); 
+
+        
+        fullPageContent.classList.remove('hidden'); 
+        fullPageContent.classList.add('slide-in-left'); 
+
+        
+        setTimeout(() => {
+            fullPageContent.classList.remove('slide-in-left'); 
+        }, 800); // Wait for the slide-in-left animation to finish
+    }, 800);
+});
+
 
 
 
@@ -106,5 +130,12 @@ document.getElementById('defaultMode').addEventListener('click', function() {
 });
 
 document.getElementById('tritanopiaMode').addEventListener('click', function() {
+    document.body.classList.add('tritanopia');
+});
+document.getElementById('defaultModeb').addEventListener('click', function() {
+    document.body.classList.remove('tritanopia');
+});
+
+document.getElementById('tritanopiaModeb').addEventListener('click', function() {
     document.body.classList.add('tritanopia');
 });
