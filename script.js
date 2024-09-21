@@ -1,4 +1,5 @@
-
+// Author : Arash Tashakori
+// © 2024 Arash Tashakori. All rights reserved.
 window.addEventListener('scroll', revealSections);
 
 
