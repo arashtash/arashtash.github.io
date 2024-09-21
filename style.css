@@ -72,6 +72,46 @@ body {
 }
 
 
+/*pic and about me paragraphs*/
+.about-first-paragraph {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; 
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    border-radius: 50%; 
+    width: 150px; 
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid var(--primary-color); 
+}
+
+.about-first-paragraph p {
+    flex: 1; /*make the first paragraph take the remaining space*/
+    text-align: left;
+}
+
+/*for mobile responsiveness */
+@media (max-width: 768px) {
+    .about-first-paragraph {
+        flex-direction: column; 
+        align-items: center; /*center the image on mobile */
+        text-align: left;
+    }
+
+    .profile-pic {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .about-first-paragraph p {
+        text-align: left;
+    }
+}
+
+
 
 .arash {
     font-size: 2rem;
