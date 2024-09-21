@@ -747,3 +747,28 @@ footer {
 .colorblind-circle:focus {
     outline: 2px solid #000;
 }
+
+
+
+
+
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Set 7 icons per row */
+    gap: 10px;
+    margin-top: 20px;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.skill-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.skill-icon:hover {
+    transform: scale(1.1);
+}
