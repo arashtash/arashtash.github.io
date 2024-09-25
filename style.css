@@ -541,10 +541,9 @@ html {
 }
 
 .social-icon:hover {
-    transform: scale(1.2); /* Slight zoom effect */
+    transform: scale(1.2); /*zoom effect*/
 }
 
-/* Specific brand colors (optional) */
 .social-icon .fa-linkedin {
     color: #0e76a8;
 }
@@ -562,12 +561,12 @@ html {
 
 
 
-/* Hidden initially */
+/*hidden initially*/
 .hidden {
     display: none;
 }
 
-/* Animation for sliding */
+/*animation for sliding*/
 .slide-out-left {
     animation: slideOutLeft 0.8s forwards;
 }
@@ -644,63 +643,147 @@ a:hover {
 
 
 /* Full Project Page Styling */
-#projectsPage {
-    background-color: #f0f0f0;
-    padding: 50px 20px;
-    min-height: 100vh;
-    text-align: center;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#projectsPage h2 {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 40px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    text-align: center;
-}
-
-/* Styling for the list of projects on the full projects page */
-.projects-list {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 40px;
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto; 
-}
-
-/* Styling for each project item in the full projects page */
 .project-item-full {
     background-color: #fff;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); 
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: left;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    max-height: 300px;
+    transition: max-height 0.3s ease;
 }
 
+/* add expand effect for long description */
+.project-item-full.expanded {
+    max-height: 1500px;
+}
+
+/*hover effect for better interactivity */
 .project-item-full:hover {
-    transform: translateY(-8px); 
+    transform: translateY(-5px); 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
 }
 
+/* add a visual hierarchy for project headers */
 .project-header {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-transform: capitalize;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* keywords styling */
+.project-description strong {
+    color: var(--primary-color);
     font-weight: 600;
 }
 
+/* Typography improvements for better readability */
 .project-description {
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.6;
+    font-size: 1.05rem;
+    color:  #555;
+
+    line-height: 1.8;
+    transition: all 0.3s ease;
 }
+
+/* Add some spacing between paragraphs */
+.project-description p {
+    margin-bottom: 20px; 
+    line-height: 1.8;
+}
+
+/*button styling for expand/collapse functionality */
+.project-item-full .expand-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 25px;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project-item-full .expand-btn:hover {
+    background-color: var(--hover-color);
+}
+
+/* styling for project links */
+.project-description a {
+    color: var(--primary-color); 
+    font-weight: 600;
+    text-decoration: underline;
+
+
+    transition: color 0.3s ease; 
+}
+
+.project-description a:hover {
+    color: var(--hover-color);
+    text-decoration: none;
+}
+
+/* Add a visual distinction between projects */
+.projects-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .projects-list {
+        grid-template-columns: 1fr; 
+    }
+}
+
+/*increase padding around the project page*/
+#projectsPage {
+    padding: 60px 20px;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+/*Modify h2 styling */
+#projectsPage h2 {
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+}
+
+/*better button container styling */
+.button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
 
 /* Back button styling */
 .button-container {
@@ -739,7 +822,7 @@ a:hover {
 }
 
 
-
+/* FOOTER */
 footer {
     background-color: #333; 
     color: white; 
@@ -753,13 +836,13 @@ footer {
 }
 
 
-
-.colorblind-options {
+/* ACCESSIBILITY */
+.color-options {
     margin: 20px;
     text-align: center;
 }
 
-.colorblind-circle {
+.color-circle {
     display: inline-block;
     width: 40px;
     height: 40px;
@@ -769,21 +852,21 @@ footer {
     transition: transform 0.3s ease;
 }
 
-.colorblind-circle.default {
+.color-circle.default {
     background-color: #007aff;
     border: 3px solid #ffea05;
 }
 
-.colorblind-circle.red-green {
+.color-circle.red-green {
     background-color: #00aa00;
     border: 3px solid #ff5500;
 }  
 
-.colorblind-circle:hover {
+.color-circle:hover {
     transform: scale(1.1); /*  zoom */
 }
 
-.colorblind-circle:focus {
+.color-circle:focus {
     outline: 2px solid #000;
 }
 
@@ -791,7 +874,7 @@ footer {
 
 
 
-
+/* SKILL ICONS */
 .icon-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr); /* Set 7 icons per row */
