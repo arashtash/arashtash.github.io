@@ -22,7 +22,7 @@
 <body>
     <div id="fullPageContent">
         <div class="container">
-            <!-- Left Sidebar (Navigation) -->
+            <!-- navigation-->
             <aside class="sidebar">
                 <h1 class="arash">Arash Tashakori</h1>
                 <nav class="nav">
@@ -43,9 +43,9 @@
             <main class="main-content">
 
                 <h5 style="text-align: center; color: black;">Colour Scheme</h5>
-                <div class="colorblind-options">
-                    <div id="defaultMode" class="colorblind-circle default"></div>
-                    <div id="tritanopiaMode" class="colorblind-circle red-green"></div>
+                <div class="color-options">
+                    <div id="defaultMode" class="color-circle default"></div>
+                    <div id="tritanopiaMode" class="color-circle red-green"></div>
                 </div>
                 <!-- About Section -->
                 <section id="about">
@@ -108,7 +108,7 @@
                     </div>
                 </section>
 
-                <!-- Education Section -->
+                <!-- edu section -->
                 <section id="education">
                     <h2>Education</h2>
                     <div class="education-item">
@@ -148,7 +148,7 @@
                     </div>
                 </section>
 
-                <!-- Experience Section -->
+                <!--experience Section -->
                 <section id="experience">
                     <h2>Experience</h2>
                     <div class="experience-item">
@@ -177,7 +177,7 @@
                     </div>
                 </section>
 
-                <!-- Projects Section -->
+                <!--projects section -->
                 <section id="projects">
                     <h2>Selected Projects</h2>
                 
@@ -196,7 +196,7 @@
                         <p>Used Hugging Face's PEFT library to fine-tune the GPT-2 model for text classification using Python and PyTorch, optimizing the model through targeted fine-tuning to enhance accuracy.</p>
                     </div>
 
-                    <!-- View More Projects Button -->
+                    <!-- View More Projects button -->
                     <div class="button-container">
                         <button id="viewMoreProjects" class="view-more-btn">View More Projects with Details</button>
                     </div>
@@ -220,7 +220,7 @@
                     </div>
                 </section>
 
-                <!-- Resume Section -->
+                <!--resume section-->
                 <section id="resume">
                     <h2>Resume</h2>
                     <div class="resume-download">
@@ -254,18 +254,23 @@
 
 
 
+
+
+    <!--PROJECTS LIST PAGE-->
     <section id="projectsPage" class="hidden">
         <h5 style="text-align: center; color: black;">Colour Scheme</h5>
-        <div class="colorblind-options">
-            <div id="defaultModeb" class="colorblind-circle default"></div>
-            <div id="tritanopiaModeb" class="colorblind-circle red-green"></div>
+        <div class="color-options">
+            <div id="defaultModeb" class="color-circle default"></div>
+            <div id="tritanopiaModeb" class="color-circle red-green"></div>
         </div>
 
         <!-- Back Button to go to the original content -->
         <div class="button-container">
             <button id="backToFullPage" class="view-more-btn">Back to the Main Page</button>
         </div>
-        <h2 style="margin-top: 15px;">List of Completed Projects</h2>
+        <div style="text-align: center;">
+            <h2 style="margin-top: 15px;">List of Completed Projects</h2>
+        </div>
 
         <div class="projects-list">
             <div class="project-item-full">
@@ -486,6 +491,8 @@
             <button id="backToFullPageB" class="view-more-btn">Back to the Main Page</button>
         </div>
     </section>
+
+    <!--PROJECTS LIST PAGE ENDS-->
 
 
 
