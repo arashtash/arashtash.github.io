@@ -23,7 +23,7 @@ function revealSections() {
 }
 
 
-// Smooth scroll for navigation links
+// scrolling for navigation links
 document.querySelectorAll('.nav ul li a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -53,29 +53,28 @@ document.getElementById('toggleCourses').addEventListener('click', function() {
 
 
 
-// Handle View More Projects Button
+//View More Projects button
 document.getElementById('viewMoreProjects').addEventListener('click', function() {
     const fullPageContent = document.getElementById('fullPageContent');
     const projectsPage = document.getElementById('projectsPage');
 
-    // Slide out the entire current page content
+    //slide out all of current page content
     fullPageContent.classList.add('slide-out-left');
 
-    // After the animation completes, hide the section and show the projects-only page
+    //after the animation is completed hide the section and show the projects only page
     setTimeout(() => {
         fullPageContent.classList.add('hidden'); 
         fullPageContent.classList.remove('slide-out-left'); 
         projectsPage.classList.remove('hidden'); 
         projectsPage.classList.add('slide-in-right'); 
-
-        // Scroll to the top of the project list
         
     }, 800); 
 
+    //scroll to the top of the project page
     window.scrollTo(0, 0);
 });
 
-// Handle Back to Full Page Button
+//Back to Full Page Button
 document.getElementById('backToFullPage').addEventListener('click', function() {
     const fullPageContent = document.getElementById('fullPageContent');
     const projectsPage = document.getElementById('projectsPage');
@@ -83,7 +82,7 @@ document.getElementById('backToFullPage').addEventListener('click', function() {
     
     projectsPage.classList.add('slide-out-right');
 
-    // After the slide-out animation finishes, hide the projects page and show the full page content
+    //after the slide-out animation finishes, hide the projects page and show the full page content
     setTimeout(() => {
         projectsPage.classList.add('hidden'); 
         projectsPage.classList.remove('slide-out-right'); 
@@ -95,11 +94,11 @@ document.getElementById('backToFullPage').addEventListener('click', function() {
         
         setTimeout(() => {
             fullPageContent.classList.remove('slide-in-left'); 
-        }, 800); // Wait for the slide-in-left animation to finish
+        }, 800); // Wait for the slide-to-left animation to finish
     }, 800);
 });
 
-// Handle Back to Full Page Button
+// back to Full Page Button
 document.getElementById('backToFullPageB').addEventListener('click', function() {
     const fullPageContent = document.getElementById('fullPageContent');
     const projectsPage = document.getElementById('projectsPage');
@@ -107,7 +106,7 @@ document.getElementById('backToFullPageB').addEventListener('click', function() 
     
     projectsPage.classList.add('slide-out-right');
 
-    // After the slide-out animation finishes, hide the projects page and show the full page content
+    //after the sliding animation finishes, hide the projects page and show the full page content
     setTimeout(() => {
         projectsPage.classList.add('hidden'); 
         projectsPage.classList.remove('slide-out-right'); 
@@ -119,8 +118,32 @@ document.getElementById('backToFullPageB').addEventListener('click', function() 
         
         setTimeout(() => {
             fullPageContent.classList.remove('slide-in-left'); 
-        }, 800); // Wait for the slide-in-left animation to finish
+        }, 800); //wait for the slide-in-left animation to end
     }, 800);
+});
+
+
+
+
+//add expand and collapse option for project item descriptions
+document.querySelectorAll('.project-item-full').forEach(project => {
+    const btn = document.createElement('button');
+    btn.textContent = 'Expand';
+    btn.classList.add('expand-btn');
+
+    btn.addEventListener('click', function() {
+        if (project.classList.contains('expanded')) {
+            //collapse the project if it's already expanded
+            project.classList.remove('expanded');
+            btn.textContent = 'Expand';
+        } else {
+            //expand the project if not expanded
+            project.classList.add('expanded');
+            btn.textContent = 'Collapse';
+        }
+    });
+
+    project.appendChild(btn);
 });
 
 
