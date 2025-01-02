@@ -206,6 +206,8 @@ dropdownButton.addEventListener('click', () => {
     dropdownMenu.classList.toggle('hidden');
 });
 
+const pinnedKeywords = ['Java', 'Python', 'JavaScript', 'C', 'C#', 'Web Development'];
+
 //add the keywords dynamically
 const keywordsSet = new Set();
 projects.forEach(project => {
@@ -217,8 +219,18 @@ projects.forEach(project => {
     }
 });
 
-// turn the set into an array and sort it alphabetically
-const sortedKeywords = Array.from(keywordsSet).sort();
+const allKeywords = Array.from(keywordsSet);
+
+// Separate pinned keywords and others
+const pinnedKeywordsSet = new Set(pinnedKeywords); // Use a Set for fast lookup
+const pinned = allKeywords.filter(keyword => pinnedKeywordsSet.has(keyword));
+const nonPinned = allKeywords.filter(keyword => !pinnedKeywordsSet.has(keyword));
+
+// Sort non-pinned keywords alphabetically
+const sortedNonPinned = nonPinned.sort();
+
+// Combine pinned and non-pinned keywords
+const sortedKeywords = [...pinned, ...sortedNonPinned];
 
 //Add the keywords to the dropdown menu
 sortedKeywords.forEach(keyword => {
@@ -237,25 +249,26 @@ filterKeywordsList.addEventListener('click', (e) => {
         const selectedKeyword = e.target.dataset.keyword;
         const isActive = e.target.classList.toggle('active');
 
+        // Get all currently active filters
+        const activeButtons = filterKeywordsList.querySelectorAll('button.active');
+        const activeKeywords = Array.from(activeButtons).map(button => button.dataset.keyword);
+        
         //show/hide projects based on the selected keyword
         projects.forEach(project => {
             const keywordsElement = project.querySelector('.keyword');
             if (keywordsElement) {
                 const keywordsText = keywordsElement.textContent.replace('Keywords:', '').trim();
-                const keywordsArray = keywordsText.split(',').map(keyword => keyword.trim());
-
-
-                //match the selected keyword exactly
-                if (isActive && keywordsArray.includes(selectedKeyword)) {
+                const matches = activeKeywords.some(keyword => keywordsText.includes(keyword));
+                
+                if (matches || activeKeywords.length === 0) {
                     project.style.display = 'block';
-                } else if (!keywordsArray.includes(selectedKeyword)) {
+                } else {
                     project.style.display = 'none';
                 }
             }
         });
 
         //show the reset filters button when any filter is active
-        const activeButtons = filterKeywordsList.querySelectorAll('button.active');
         if (activeButtons.length > 0) {
             resetButton.style.display = 'block';
         } 
