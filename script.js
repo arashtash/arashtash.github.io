@@ -168,18 +168,22 @@ document.getElementById('tritanopiaModeb').addEventListener('click', function() 
 
 //Filtering projects:
 document.addEventListener('DOMContentLoaded', () => {
-    //get all projects and their keywords
+    // Get all projects and their keywords
     const projects = document.querySelectorAll('.project-item-full');
     const keywordsSet = new Set();
 
-    //getting all keywords from project cards
+    // Extract all keywords from the projects
     projects.forEach(project => {
-        const keywordsText = project.querySelector('strong').textContent;
-        const keywords = keywordsText.split(',').map(keyword => keyword.trim());
-        keywords.forEach(keyword => keywordsSet.add(keyword));
+        // Find the paragraph containing "Keywords:"
+        const keywordsParagraph = project.querySelector('p:has(strong):contains("Keywords:")');
+        if (keywordsParagraph) {
+            const keywordsText = keywordsParagraph.textContent.replace('Keywords:', '').trim();
+            const keywords = keywordsText.split(',').map(keyword => keyword.trim());
+            keywords.forEach(keyword => keywordsSet.add(keyword));
+        }
     });
 
-    //adding keywords sidebar to the filter side bar
+    // Populate the filter sidebar with keywords
     const filterKeywordsList = document.getElementById('filter-keywords');
     keywordsSet.forEach(keyword => {
         const li = document.createElement('li');
@@ -190,26 +194,34 @@ document.addEventListener('DOMContentLoaded', () => {
         filterKeywordsList.appendChild(li);
     });
 
-    //filter projects based on keywords
+    // Filter projects based on selected keywords
     filterKeywordsList.addEventListener('click', (e) => {
         if (e.target.tagName === 'BUTTON') {
             const selectedKeyword = e.target.dataset.keyword;
             const isActive = e.target.classList.toggle('active');
             
-            //showing projects based on the keyword selected
+            // Show/hide projects based on the selected keyword
             projects.forEach(project => {
-                const keywordsText = project.querySelector('strong').textContent;
-                if (isActive) {
-                    if (keywordsText.includes(selectedKeyword)) {
+                const keywordsParagraph = project.querySelector('p:has(strong):contains("Keywords:")');
+                if (keywordsParagraph) {
+                    const keywordsText = keywordsParagraph.textContent.replace('Keywords:', '').trim();
+                    if (isActive && keywordsText.includes(selectedKeyword)) {
                         project.style.display = 'block';
                     } else {
                         project.style.display = 'none';
                     }
-                } else {
-                    project.style.display = 'block';
                 }
             });
+
+            // If no buttons are active, show all projects
+            const activeButtons = filterKeywordsList.querySelectorAll('button.active');
+            if (activeButtons.length === 0) {
+                projects.forEach(project => {
+                    project.style.display = 'block';
+                });
+            }
         }
     });
 });
+
 
