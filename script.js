@@ -206,7 +206,7 @@ dropdownButton.addEventListener('click', () => {
     dropdownMenu.classList.toggle('hidden');
 });
 
-const pinnedKeywords = ['Java', 'Python', 'JavaScript', 'C', 'C#', 'Web Development'];
+const pinnedKeywords = ['Python', 'Java', 'JavaScript', 'C', 'C#'];
 
 //add the keywords dynamically
 const keywordsSet = new Set();
