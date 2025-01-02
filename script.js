@@ -258,7 +258,12 @@ filterKeywordsList.addEventListener('click', (e) => {
             const keywordsElement = project.querySelector('.keyword');
             if (keywordsElement) {
                 const keywordsText = keywordsElement.textContent.replace('Keywords:', '').trim();
-                const matches = activeKeywords.some(keyword => keywordsText.includes(keyword));
+                const projectKeywords = keywordsText.split(',').map(keyword => keyword.trim());
+
+                const matches = activeKeywords.some(activeKeyword =>
+                    projectKeywords.includes(activeKeyword)
+                );
+
                 
                 if (matches || activeKeywords.length === 0) {
                     project.style.display = 'block';
