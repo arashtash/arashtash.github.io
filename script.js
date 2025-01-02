@@ -163,3 +163,53 @@ document.getElementById('defaultModeb').addEventListener('click', function() {
 document.getElementById('tritanopiaModeb').addEventListener('click', function() {
     document.body.classList.add('tritanopia');
 });
+
+
+
+//Filtering projects:
+document.addEventListener('DOMContentLoaded', () => {
+    //get all projects and their keywords
+    const projects = document.querySelectorAll('.project-item-full');
+    const keywordsSet = new Set();
+
+    //getting all keywords from project cards
+    projects.forEach(project => {
+        const keywordsText = project.querySelector('strong').textContent;
+        const keywords = keywordsText.split(',').map(keyword => keyword.trim());
+        keywords.forEach(keyword => keywordsSet.add(keyword));
+    });
+
+    //adding keywords sidebar to the filter side bar
+    const filterKeywordsList = document.getElementById('filter-keywords');
+    keywordsSet.forEach(keyword => {
+        const li = document.createElement('li');
+        const button = document.createElement('button');
+        button.textContent = keyword;
+        button.dataset.keyword = keyword;
+        li.appendChild(button);
+        filterKeywordsList.appendChild(li);
+    });
+
+    //filter projects based on keywords
+    filterKeywordsList.addEventListener('click', (e) => {
+        if (e.target.tagName === 'BUTTON') {
+            const selectedKeyword = e.target.dataset.keyword;
+            const isActive = e.target.classList.toggle('active');
+            
+            //showing projects based on the keyword selected
+            projects.forEach(project => {
+                const keywordsText = project.querySelector('strong').textContent;
+                if (isActive) {
+                    if (keywordsText.includes(selectedKeyword)) {
+                        project.style.display = 'block';
+                    } else {
+                        project.style.display = 'none';
+                    }
+                } else {
+                    project.style.display = 'block';
+                }
+            });
+        }
+    });
+});
+
