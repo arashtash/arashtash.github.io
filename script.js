@@ -165,63 +165,121 @@ document.getElementById('tritanopiaModeb').addEventListener('click', function() 
 });
 
 
+// Filtering projects:
+const dropdownButton = document.getElementById('filter-dropdown-button');
+const dropdownMenu = document.getElementById('filter-dropdown-menu');
+const filterKeywordsList = document.getElementById('filter-keywords');
+const projects = document.querySelectorAll('.project-item-full');
 
-//Filtering projects:
-document.addEventListener('DOMContentLoaded', () => {
-    // Get all projects and their keywords
-    const projects = document.querySelectorAll('.project-item-full');
-    const keywordsSet = new Set();
+//add 'Reset Filters' button dynamically
+const resetButton = document.createElement('button');
+resetButton.textContent = 'Reset Filters';
+resetButton.id = 'reset-filters-button';
+resetButton.style.display = 'none'; //initially hidden
+dropdownMenu.prepend(resetButton); //prepend the button to the menu
 
-    // Extract all keywords from the projects
-    projects.forEach(project => {
-        // Find the paragraph containing "Keywords:"
-        const keywordsParagraph = project.querySelector('p:has(strong):contains("Keywords:")');
-        if (keywordsParagraph) {
-            const keywordsText = keywordsParagraph.textContent.replace('Keywords:', '').trim();
-            const keywords = keywordsText.split(',').map(keyword => keyword.trim());
-            keywords.forEach(keyword => keywordsSet.add(keyword));
-        }
-    });
+//apply styling
+resetButton.style.marginBottom = '10px'; 
+resetButton.style.marginTop = '10px'; 
+resetButton.style.padding = '10px 20px'; 
+resetButton.style.fontSize = '1rem'; 
+resetButton.style.border = 'none'; 
+resetButton.style.borderRadius = '8px'; 
+resetButton.style.backgroundColor = 'var(--primary-color)'; 
+resetButton.style.color = 'white'; 
+resetButton.style.cursor = 'pointer'; 
+resetButton.style.display = 'block';
+resetButton.style.marginLeft = 'auto'; 
+resetButton.style.marginRight = 'auto';
+resetButton.style.textAlign = 'center';
 
-    // Populate the filter sidebar with keywords
-    const filterKeywordsList = document.getElementById('filter-keywords');
-    keywordsSet.forEach(keyword => {
-        const li = document.createElement('li');
-        const button = document.createElement('button');
-        button.textContent = keyword;
-        button.dataset.keyword = keyword;
-        li.appendChild(button);
-        filterKeywordsList.appendChild(li);
-    });
-
-    // Filter projects based on selected keywords
-    filterKeywordsList.addEventListener('click', (e) => {
-        if (e.target.tagName === 'BUTTON') {
-            const selectedKeyword = e.target.dataset.keyword;
-            const isActive = e.target.classList.toggle('active');
-            
-            // Show/hide projects based on the selected keyword
-            projects.forEach(project => {
-                const keywordsParagraph = project.querySelector('p:has(strong):contains("Keywords:")');
-                if (keywordsParagraph) {
-                    const keywordsText = keywordsParagraph.textContent.replace('Keywords:', '').trim();
-                    if (isActive && keywordsText.includes(selectedKeyword)) {
-                        project.style.display = 'block';
-                    } else {
-                        project.style.display = 'none';
-                    }
-                }
-            });
-
-            // If no buttons are active, show all projects
-            const activeButtons = filterKeywordsList.querySelectorAll('button.active');
-            if (activeButtons.length === 0) {
-                projects.forEach(project => {
-                    project.style.display = 'block';
-                });
-            }
-        }
-    });
+//Add hover effect
+resetButton.addEventListener('mouseenter', () => {
+    resetButton.style.backgroundColor = 'var(--hover-color)'; 
+});
+resetButton.addEventListener('mouseleave', () => {
+    resetButton.style.backgroundColor = 'var(--primary-color)';
 });
 
+//open/close drop down menu
+dropdownButton.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('hidden');
+});
+
+//add the keywords dynamically
+const keywordsSet = new Set();
+projects.forEach(project => {
+    const keywordsElement = project.querySelector('.keyword');
+    if (keywordsElement) {
+        const keywordsText = keywordsElement.textContent.replace('Keywords:', '').trim();
+        const keywords = keywordsText.split(',').map(keyword => keyword.trim());
+        keywords.forEach(keyword => keywordsSet.add(keyword));
+    }
+});
+
+// turn the set into an array and sort it alphabetically
+const sortedKeywords = Array.from(keywordsSet).sort();
+
+//Add the keywords to the dropdown menu
+sortedKeywords.forEach(keyword => {
+    const li = document.createElement('li');
+    const button = document.createElement('button');
+    button.textContent = keyword;
+
+    button.dataset.keyword = keyword;
+    li.appendChild(button);
+    filterKeywordsList.appendChild(li);
+});
+
+//filter projects based on selected keywords
+filterKeywordsList.addEventListener('click', (e) => {
+    if (e.target.tagName === 'BUTTON') {
+        const selectedKeyword = e.target.dataset.keyword;
+        const isActive = e.target.classList.toggle('active');
+
+        //show/hide projects based on the selected keyword
+        projects.forEach(project => {
+            const keywordsElement = project.querySelector('.keyword');
+            if (keywordsElement) {
+                const keywordsText = keywordsElement.textContent.replace('Keywords:', '').trim();
+                const keywordsArray = keywordsText.split(',').map(keyword => keyword.trim());
+
+
+                //match the selected keyword exactly
+                if (isActive && keywordsArray.includes(selectedKeyword)) {
+                    project.style.display = 'block';
+                } else if (!keywordsArray.includes(selectedKeyword)) {
+                    project.style.display = 'none';
+                }
+            }
+        });
+
+        //show the reset filters button when any filter is active
+        const activeButtons = filterKeywordsList.querySelectorAll('button.active');
+        if (activeButtons.length > 0) {
+            resetButton.style.display = 'block';
+        } 
+        else {
+            resetButton.style.display = 'none';
+            projects.forEach(project => {
+                project.style.display = 'block';
+            });
+        }
+    }
+});
+
+//resetting filters
+resetButton.addEventListener('click', () => {
+    //clear all active buttons
+    const activeButtons = filterKeywordsList.querySelectorAll('button.active');
+    activeButtons.forEach(button => button.classList.remove('active'));
+
+    //show all projects
+    projects.forEach(project => {
+        project.style.display = 'block';
+    });
+
+    //hide the reset filters button
+    resetButton.style.display = 'none';
+});
 
