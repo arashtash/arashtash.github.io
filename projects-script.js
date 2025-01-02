@@ -1,325 +1,177 @@
 // Author : Arash Tashakori
 // © 2025 Arash Tashakori. All rights reserved.
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="format-detection" content="telephone=no">
-    <title>Complete Project List - Arash Tashakori</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+// Author : Arash Tashakori
+// © 2024 Arash Tashakori. All rights reserved.
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-</head>
-<body>
-    <!--PROJECTS LIST PAGE-->
-    <section id="projectsPage">
-        <h5 style="text-align: center; color: black;">Colour Scheme</h5>
-        <div class="color-options">
-            <div id="defaultModeb" class="color-circle default"></div>
-            <div id="tritanopiaModeb" class="color-circle red-green"></div>
-        </div>
+// color switching
+document.getElementById('defaultModeb').addEventListener('click', function () {
+    document.body.classList.remove('tritanopia');
+});
 
-        <!-- Back Button to go to the original content -->
-        <div class="button-container">
-            <a href="index.html" class="view-more-btn">Back to Main Page</a>
-        </div>
+document.getElementById('tritanopiaModeb').addEventListener('click', function () {
+    document.body.classList.add('tritanopia');
+});
 
 
-
-        <div style="text-align: center;">
-            <h2 style="margin-top: 15px;">List of Completed Projects</h2>
-        </div>
-
-
-        <div id="filter-dropdown-container">
-            <button id="filter-dropdown-button">Filter Projects</button>
-            <div id="filter-dropdown-menu" class="hidden">
-                <h3>Filter by Keywords</h3>
-                <ul id="filter-keywords">
-                    <!-- Keywords dynamically added here -->
-                </ul>
-            </div>
-        </div>
-
-        <div class="projects-list">
-            <div class="project-item-full">
-                <div class="project-header">
-                    <h3>Boardify</h3>
-                </div>
-                <div class="project-description">
-                    <p>Boardify is a list-sharing web application, inspired by Trello, developed collaboratively with two teammates as part of our Software Engineering course at Dalhousie University. The project involved rotating roles among team members, with each person contributing to both frontend and backend development, and taking turns in leadership roles weekly. We utilized Agile Methodology, delivering the project in iterative milestones, ensuring the application was always functional and presentable. Continuous improvements were made based on feedback from our instructor and teaching assistants, with each sprint introducing new features and refinements.</p>
-                    <p>Boardify was developed using React.js (JavaScript library), Spring Boot (Java framework), SQL and Git (for version control) in a Test-Driven Development (TDD) process, with over 70% testing line coverage. The implemented features are user registration, authentication (Login), creating workspaces and adding users to them, creating boards and adding tasks within them, updating task status and searching and filtering tasks.</p>
-                    <a href="https://github.com/arashtash/Boardify" target="_blank">Boardify's code on GitHub.</a>
-                    <p class="keyword"><strong>Keywords</strong>: JavaScript, React.js, Java, Spring Boot, MySQL, HTML, CSS, Agile Methodology, Full-Stack Development, Collaboration, Git, Test-Driven Development, Object-Oriented Programming, Data Structures, Web Development</p>
-                </div>
-            </div>
-
-            <div class="project-item-full">
-                <div class="project-header">
-                    <h3>Scheme Interpreter</h3>
-                </div>
-                <div class="project-description">
-                    <p>Developed a comprehensive interpreter for the Scheme programming language using Java, implementing essential features such as lambda expressions, conditionals, list manipulation, and logic and arithmetic operations.</p>
-                    <p>Utilized object-oriented principles to ensure modularity and maintainability of the codebase. Followed a test-driven development approach, implementing rigorous unit and integration testing to guarantee high-quality and reliable functionality. Designed and built a custom parser, tokenizer, and evaluator to process and evaluate complex, nested Scheme expressions, recursive calls and lists, providing a robust solution for handling Scheme language operations.</p>
-                    <a href="https://github.com/arashtash/Scheme_interpreter" target="_blank">My Scheme Interpreter's code on GitHub.</a>
-                    <p class="keyword"><strong>Keywords</strong>: Java, Scheme, JUnit, Git, Test-Driven Development, Object-Oriented Programming, Data Structures, Algorithm Design</p>
-                    
-                </div>
-            </div>
-
-            <div class="project-item-full">
-                <div class="project-header">
-                    <h3>Data Mining and Analysis on Multiple Datasets</h3>
-                </div>
-                <div class="project-description">
-                    <p>As part of my Data Mining and Warehousing course, I gained hands-on experience with key aspects of Data Mining, including data preprocessing, OLAP, discretization, and applying machine learning algorithms. I worked with real-world datasets, such as COVID-19 data for Nova Scotia, where I focused on data cleaning, structuring, and analysis. I implemented k-means clustering algorithm from scratch and compared its results with Scikit-learn’s version across multiple datasets. Additionally, I utilized classification models like Naive Bayes and Neural Networks to predict outcomes, using Python and its libraries such as NumPy, Pandas, and Scikit-learn.</p>
-                    <p>I explored OLAP and discretization concepts, applying them to political data from Brazil, and conducted analysis on the health and environmental impacts of seafood consumption. Using datasets related to nutrition and sustainability, I created visualizations to examine trends in protein consumption, fish stock sustainability, and environmental impacts, providing insights into global seafood production and its effects.</p>
-                    <a href="https://github.com/arashtash/Data-Mining-and-Analysis-on-Multiple-Datasets" target="_blank">My Data Mining projects on GitHub.</a>
-                    <p class="keyword"><strong>Keywords</strong>: Python, Data Mining, Data Science, Machine Learning, Data Analysis, Data Warehousing, Visualization, Artificial Neural Networks, Classification, Clustering, NumPy, Pandas, Scikit-learn</p>
-                    
-                </div>
-            </div>
-
-            <div class="project-item-full">
-                <div class="project-header">
-                    <h3>Implementation and Application of ML Algorithms</h3>
-                </div>
-                <div class="project-description">
-                    <p>Completed multiple Machine Learning and Data Science projects, focusing on both foundational concepts and advanced techniques. I began by working with probability distributions, calculating expected values, variances, and entropies, followed by generating synthetic datasets and visualizing clusters. I implemented key algorithms such as k-nearest neighbors for classification and K-means clustering, optimizing the number of clusters using the Silhouette Score and visualizing the results.</p>
-                    <p>In addition, I developed and experimented with neural networks for image classification tasks, using datasets such as MNIST and CIFAR-100. I explored different hyperparameters to improve performance and analyzed the generalization of the networks. I also trained convolutional neural networks and implemented a multi-layer perceptron for binary classification. Throughout these tasks, I utilized Python, NumPy, Keras, Matplotlib, and TensorFlow for data manipulation, model development, and evaluation.</p>
-                    <a href="https://github.com/arashtash/Implementation-and-Application-of-ML-Algorithms" target="_blank">My Machine Learning projects on GitHub.</a>
-                    <p class="keyword"><strong>Keywords</strong>: Python, Machine Learning, Data Science, Deep Learning, Artificial Neural Networks, Image Classification, Classification, Clustering, NumPy, Keras, TensorFlow</p>
-                </div>
-            </div>
+//add expand and collapse option for project item descriptions
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.project-item-full').forEach(project => {
+        const btn = document.createElement('button');
+        btn.textContent = 'Expand';
+        btn.classList.add('expand-btn');
 
 
-            <div class="project-item-full">
-                <div class="project-header">
-                    <h3>Document Retrieval with Inverted Index</h3>
-                </div>
-                <div class="project-description">
-                    <p>Developed a recipe retrieval system using Python, implementing term-document matrix, inverted index, Jaccard similarly, and TF-IDF retrieval techniques to efficiently search and retrieve recipes.</p>
-                    <p>Built and compared different search methods, including tree-based inverted index and Whoosh library, by evaluating their performance and service latency, demonstrating a strong understanding of fundamental information retrieval concepts and data structures.</p>
-                    <a href="https://github.com/arashtash/Document-Retrieval" target="_blank">My Document Retrieval project on GitHub.</a>
-                    <p class="keyword"><strong>Keywords</strong>: Python, Information Retrieval, Data Science, Data Structures, Algorithm Design, Scikit-learn, Whoosh</p>
-                </div>
-            </div>
+        btn.addEventListener('click', function() {
+            if (project.classList.contains('expanded')) {
+                //collapse the project if it's already expanded
+                project.classList.remove('expanded');
+                btn.textContent = 'Expand';
+            } else {
+                //expand the project if not expanded
+                project.classList.add('expanded');
+                btn.textContent = 'Collapse';
+            }
+        });
 
-            <div class="project-item-full">
-                <div class="project-header">
-                    <h3>Simulation of Stochastic Hurricane Tracks</h3>
-                </div>
-                <div class="project-description">
-                    <p>In this project, I applied statistical modeling and machine learning techniques to simulate hurricane tracks and intensity in the Atlantic Ocean and the east coast of the United States, under the supervision of <a href="https://www.linkedin.com/in/siamak-daneshvaran/" target="_blank">Dr. Siamak Daneshvaran</a>. Using 100 years of historical data from NOAA, I developed a model that simulates stochastic hurricane tracks and pressure changes, incorporating key atmospheric factors like wind patterns and sea surface temperature.</p>
-                    <p>The project involved deep learning algorithms to predict hurricane paths, and I tested the model against recent hurricanes to evaluate its accuracy. This project was completed using Python, PyTorch, NumPy, Pandas, and Scikit-learn for data processing, model development, and evaluation.</p>
-                    <p class="keyword"><strong>Keywords</strong>: Python, Machine Learning, Deep Learning, Statistical Modeling, NumPy, PyTorch, Pandas, Scikit-learn</p>
-                </div>
-            </div>
-
-            <div class="project-item-full">
-                <div class="project-header">
-                    <h3>Dog Breeds Image Classification using CNN Models</h3>
-                </div>
-                <div class="project-description">
-                    <p>In this project, I developed an Object-Oriented Python program to classify pet images during my Generative AI Externship at Cognizant, with a focus on identifying whether the images contain a dog, and if so, determining the breed. Using three different Convolutional Neural Network architectures — ResNet, AlexNet, and VGG — I explored the effectiveness of each model in achieving these goals. My program also compared the classifier’s results with actual pet labels, making use of file input and handling various data structures. To enhance the program’s efficiency, I incorporated command-line arguments for user inputs and timed the execution of each model to assess its computational performance.</p>
-                    <p>Through this project, I gained experience in image classification using CNN models and became proficient in evaluating model performance based on accuracy and runtime. I successfully implemented logic to classify images as "dog" or "not dog" using a reference file and achieved accurate breed classification in dog images. The project helped me develop a deeper understanding of the trade-offs between different deep learning model architectures. As a part of my Externship at Cognizant, part of this code (The CNN models themselves) are not mine, therefore I can't share this project on GitHub.</p>
-                    <a href="https://www.udacity.com/certificate/e/9836d42c-2263-11ef-b33b-a73256188265" target="_blank">My certificate of completion of Cognizant's Generative AI Externship.</a>
-                    <p class="keyword"><strong>Keywords</strong>: Python, Object-Oriented Programming, Image Classification, Classification, Machine Learning, Deep Learning, Model Evaluation, Convolutional Neural Networks, Data Structures, Algorithm Design</p>
-                </div>
-            </div>
-
-            <div class="project-item-full">
-                <div class="project-header">
-                    <h3>Applying Lightweight Fine-Tuning to a Foundation Model</h3>
-                </div>
-                <div class="project-description">
-                    <p>In this project, I fine-tuned a GPT-2 model for sequence classification using Hugging Face's PEFT (Parameter-Efficient Fine-Tuning) library. The project involved training and evaluating the model on the <a href="https://huggingface.co/datasets/climatebert/climate_sentiment" target="_blank">climatebert/climate_sentiment</a> dataset to classify text into categories of "risk," "neutral," or "opportunity." Initially, I conducted an evaluation of the pre-trained GPT-2 model, achieving an accuracy of 36.5%. After applying PEFT using LoRA (Low-Rank Adaptation), I fine-tuned the model, significantly improving its accuracy to 52% over only four epochs.</p>
-                    <p>I implemented and trained both traditional and PEFT models using Python libraries such as NumPy, PyTorch, PEFT and Pandas. This project shows the effectiveness of lightweight fine-tuning for improving model performance while reducing computational complexity.</p>
-                    <a href="https://github.com/arashtash/GPT2-Fine-Tuning" target="_blank">My Sequence Classification project on GitHub.</a>
-                    <p class="keyword"><strong>Keywords</strong>: Python, Generative AI, Classification, Natural Language Processing, Model Fine-Tuning, NumPy, PyTorch, Pandas, PEFT</p>
-                </div>
-            </div>
-
-            <div class="project-item-full">
-                <div class="project-header">
-                    <h3>Python Probabilistic Chess Game</h3>
-                </div>
-                <div class="project-description">
-                    <p>Developed a chess game with an "AI opponent" using Python and Pygame, featuring a minimax algorithm with alpha-beta pruning for efficient decision-making. The chess AI incorporates heuristic evaluation of board states, taking into account piece values, positional advantages, and mobility. A key innovation in this project is the incorporation of probabilistic move selection, to introduce randomness and make the AI's behavior less deterministic and more human-like.</p>
-                    <p>This project showcases a combination of game development, rule-based AI principles, probabilitic move selection and Graphical User Interface design. Players can enjoy a visually appealing and competitive chess game.</p>
-                    <a href="https://github.com/arashtash/chess-game" target="_blank">Chess AI Game on GitHub.</a>
-                    <p class="keyword"><strong>Keywords</strong>: Python, Graphical User Interface, Probabilistic Decision-Making, Game Development</p>
-                </div>
-            </div>
-
-
-            
-
-            <div class="project-item-full">
-                <div class="project-header">
-                    <h3>UI/UX Design: Keep me on Task</h3>
-                </div>
-                <div class="project-description">
-                    <p>During my User Interface Design course at Dalhousie University, I collaborated with a team of five other CS students to design the user interface of a mobile app aimed at enhancing user productivity. The app featured tools like app usage restrictions, task management via a calendar, and an integrated group chat muting function. We incorporated insights from academic research on productivity apps and user interviews into our design process, continuously refining our approach.</p>
-                    <p>Key achievements include conducting contextual inquiries with students to identify distractions and user needs, analyzing the data using affinity diagramming, and developing a high-fidelity prototype in Figma. We also conducted cognitive walkthroughs with evaluators, iteratively improving the design based on feedback to enhance usability and the overall user experience.</p>
-                    <p class="keyword"><strong>Keywords</strong>: Designing User Interfaces, UI/UX Design, Collaboration, Figma</p>
-                </div>
-            </div>
-
-            <div class="project-item-full" >
-                <div class="project-header">
-                    <h3>Java Encrypted Network Communication</h3>
-                </div>
-                <div class="project-description">
-                    <p>This project is a Java-based client-server application that implements and develops two types of encryption: Caesar Cipher and Vigenere Cipher. The objective is to build client-server programs that exchange encrypted messages securely over a network connection. This project was developed as part of the Network Computing course at Dalhousie University, focusing on socket programming and encryption techniques.</p>
-                    <p>The Caesar Cipher encryption method shifts each letter of the message by a specific number of positions in the alphabet, determined by a key shared between the client and server. The client requests the key from the server, and all subsequent messages are encrypted using this key before being sent to the server.</p>
-                    <p>Unlike Caesar Cipher, which uses a single key, Vigenere Cipher uses a sequence of letters as a secret keyword. The client and server both know the keyword, and the messages are encrypted by shifting each letter according to the corresponding letter in the keyword.</p>
-                    <p>The program establishes secure client-server communication using Java sockets and develops both Caesar Cipher and Vigenere Cipher for message encryption and decryption.</p>
-                    <a href="https://github.com/arashtash/JavaSocketEncryption" target="_blank">Encrypted Network Communication project on GitHub.</a>
-                    <p class="keyword"><strong>Keywords</strong>: Java, Socket Programming, Network Computing, Encryption, Algorithm Design</p>
-                </div>
-            </div>
-
-            <div class="project-item-full">
-                <div class="project-header">
-                    <h3>Java Frogger Game</h3>
-                </div>
-                <div class="project-description">
-                    <p>Developed an object-oriented version of the classic Frogger game using Java and Swing for the graphical user interface. The project involved implementing game logic to manage player movements, obstacles, and collision detection. Demonstrated my proficiency in object-oriented programming principles, as well as my ability to design and create interactive, dynamic game elements using Java.</p>
-                    <a href="https://github.com/arashtash/frogger" target="_blank">Java Frogger Game on GitHub.</a>
-                    <p class="keyword"><strong>Keywords</strong>: Java, Swing, Game Development, Object-Oriented Programming, Graphical User Interface</p>
-                </div>
-            </div>
-
-            <div class="project-item-full">
-                <div class="project-header">
-                    <h3>Java Hangman Game</h3>
-                </div>
-                <div class="project-description">
-                    <p>In this project, I developed a Java-based Hangman game with a graphical user interface using Swing. The game allows players to choose between two word categories (general words or country names) and provides a user-friendly interface for guessing letters. Key features include real-time updates of the game state, input validation, and dynamic display of the player's progress. The game also reads words from external text files, randomly selecting a word for each session. Additionally, it tracks previously guessed letters and displays remaining lives, enhancing user experience through clear feedback.</p>
-                    <a href="https://github.com/arashtash/hangmanJava" target="_blank">Java Hangman Game on GitHub.</a>
-                    <p class="keyword"><strong>Keywords</strong>: Java, Swing, Game Development, Graphical User Interface</p>
-                </div>
-            </div>
-
-            <div class="project-item-full">
-                <div class="project-header">
-                    <h3>Space Hopper</h3>
-                </div>
-                <div class="project-description">
-                    <p>Space Hopper is a platform jumper game developed in Unity using C#, featuring two uniquely designed levels with increasing difficulty. The levels include dynamic player movement and health management, patrolling animated enemies, moving and falling platforms, level transitions, and puzzles that guide the player to a spaceship at the end of each level. Each level is distinct, with one set on terrain and the other on "floating" platforms, offering different challenges and environments.</p>
-                    <p>The game includes interactive elements such as pressure plates that trigger bridge movements, lasers as stationary obstacles, and Healing Bubbles for health recovery. Additional features include fall damage, dynamic sound effects, and animated enemies, managed via a centralized Game Manager script. Players navigate through multiple menus, including Main Menu, Game Over, and Level Complete screens.</p>
-                    <p>Space Hopper was designed with object-oriented principles for scalability and maintainability and engaging level progression. The project showcases a combination of game design and programming.</p>
-                    <p class="keyword"><strong>Keywords:</strong> C#, Unity, Game Development, Object-Oriented Programming</p>
-                </div>
-            </div>
-
-            <div class="project-item-full">
-                <div class="project-header">
-                    <h3>Throne of Amunzar</h3>
-                </div>
-                <div class="project-description">
-                    <p>Throne of Amunzar: Brothers at War is a hybrid third-person hack-and-slash and tower defense game developed using Unity and C#. The game features three levels set in distinct environments (forest, desert, and snowy mountains) and involves defending a castle from waves of enemies. Players build defensive towers in predefined locations and actively fight enemies using an animated player character. The levels increase in complexity, introducing additional enemy lanes and more waves as the player progresses.</p>
-                    <p>The game incorporates a robust economic upgrade system that allows players to dynamically grow their population, affecting tax income and other revenue sources like mining, trade, and agriculture. Players can use this income to build three different types of animated towers, each with unique abilities, or invest in their economy for future benefits. Additional features include animated player attacks and movement, unique enemy animations, and dynamic environmental design.</p>
-                    <p>I worked alongside three other students on this project. My responsibilities included designing and debugging the level terrains, implementing the castle health system, creating enemy generation mechanics, designing and coding the economy upgrade system, and implementing the tower-purchasing functionality. I also developed and managed user interfaces for tower building, economic upgrades, and game progression (e.g., game over and level completion screens). The project adheres to object-oriented programming principles, with all core game elements managed by instantiable manager scripts, ensuring scalability and modularity.</p>
-                    <a href="https://github.com/arashtash/Brothers-At-War" target="_blank">Throne of Amunzar's code on GitHub.</a>
-                    <p class="keyword"><strong>Keywords:</strong> C#, Unity, Game Development, Object-Oriented Programming, Collaboration, Git</p>
-                </div>
-            </div>
-
-
-
-            <div class="project-item-full">
-                <div class="project-header">
-                    <h3>Xtra Binary Translator: RISC to x86</h3>
-                </div>
-                <div class="project-description">
-                    <p>This project implements a binary translator that converts instructions from a simplified 16-bit RISC-based instruction set into x86-64 assembly code. The translator reads binary files containing RISC instructions, decodes them, and outputs their equivalent x86-64 assembly instructions. It handles fundamental operations such as arithmetic (add, sub), data movement (mov), and stack manipulation (push, pop) operations, ensuring that these operations are accurately translated between architectures.</p>
-                    <p>The translation process involves mapping RISC registers to x86-64 registers, as the RISC architecture has 16 general-purpose 16-bit registers, while x86-64 uses 64-bit registers. Each instruction is carefully decoded, and the appropriate x86-64 assembly instructions are generated to match the behavior of the original RISC instructions. This project highlights how different architectures manage data and execute operations. This project was developed remotely using Dalhousie University's Faculty of Computer Science Timberlea server, accessed via SSH from a Linux environment for compiling, testing and debugging.</p>
-                    <a href="https://github.com/arashtash/Xtra-Binary-Translator" target="_blank">Xtra Binary Translator's code on GitHub.</a>
-                    <p class="keyword"><strong>Keywords</strong>: C, Systems Programming, Assembly, Linux, SSH</p>
-                </div>
-            </div>
-
-            <div class="project-item-full">
-                <div class="project-header">
-                    <h3>Splicer in C</h3>
-                </div>
-                <div class="project-description">
-                    <p>Developed a linked list in C and used it to create a string splicer that reassembles multiple strings by merging their overlapping parts (i.e. the first string's ending matching the second string's beginning). The program reads segments of text, stores them as linked lists, and then reassembles them into a single document based on overlapping content. This project was developed remotely using Dalhousie University's Faculty of Computer Science Timberlea server, accessed via SSH from a Linux environment for compiling, testing and debugging.</p>
-                    <a href="https://github.com/arashtash/splicer" target="_blank">Splicer's code on GitHub.</a>
-                    <p class="keyword"><strong>Keywords</strong>: C, Data Structures, Linux, SSH</p>
-                </div>
-            </div>
-
-            <div class="project-item-full">
-                <div class="project-header">
-                    <h3>Unzipper in C</h3>
-                </div>
-                <div class="project-description">
-                    <p>Unzipper is a C program that implements a decompression algorithm for a secret compression method. The project has two key components: the decoding table and the decompression process. First, the program reads a series of bytes that represent a decoding table, which holds the bit sequences corresponding to each character in the compressed file. It then outputs this table in a human-readable format. In the second part, the program uses this decoding table to decompress the compressed data. It decodes the bitstream and reconstructs the original text, outputting the decompressed result.</p>
-                    <a href="https://github.com/arashtash/unzipper" target="_blank">Unzipper's code on GitHub.</a>
-                    <p class="keyword"><strong>Keywords</strong>: C, Bit Manipulation, Systems Programming, Decoding</p>
-                </div>
-            </div>
-
-            <div class="project-item-full">
-                <div class="project-header">
-                    <h3>This Website!</h3>
-                </div>
-                <div class="project-description">
-                    <p>This personal portfolio website was designed and developed to highlight my skills, education, and projects as a Computer Science student. Built using HTML, CSS, and JavaScript, it features responsive design, smooth navigation, and animations to enhance user experience. It includes interactive elements like a dynamic project showcase and smooth transitions between views.</p>
-                    <a href="https://github.com/arashtash/arashtash.github.io" target="_blank">This website's code on GitHub.</a>
-                    <p class="keyword"><strong>Keywords</strong>: HTML, CSS, JavaScript, Web Development</p>
-                </div>
-            </div>
-
-
-            
-
-        </div>
-
-
-
-        <section id="contact">
-            <div class="social-icons">
-                <a href="https://linkedin.com/in/arashtashakori" target="_blank" class="social-icon">
-                    <img src="linkedin-icon.png" alt="LinkedIn" class="icon-image">
-                </a>
-                <a href="https://github.com/arashtash" target="_blank" class="social-icon">
-                    <img src="github-icon.png" alt="GitHub" class="icon-image">
-                </a>
-                <a href="https://psnprofiles.com/arashtkr" target="_blank" class="social-icon">
-                    <img src="psn-icon.png" alt="PlayStation" class="icon-image">
-                </a>
-                <a href="mailto: arashtashakori11@gmail.com" target="_blank" class="social-icon">
-                    <img src="gmail-icon.png" alt="Gmail" class="icon-image">
-                </a>
-            </div>
-        </section>
-        
-        <div class="button-container">
-            <a href="index.html" class="view-more-btn">Back to Main Page</a>
-        </div>
-    </section>
-
-    <!--PROJECTS LIST PAGE ENDS-->
+        project.appendChild(btn);
+    });
+});
 
 
 
 
-    
 
-    <footer>
-        <p>&copy; 2025 Arash Tashakori. All rights reserved.</p>
-    </footer>
+//filtering projects
+const dropdownButton = document.getElementById('filter-dropdown-button');
+const dropdownMenu = document.getElementById('filter-dropdown-menu');
+const filterKeywordsList = document.getElementById('filter-keywords');
+const projects = document.querySelectorAll('.project-item-full');
 
-    <script src="projects-script.js"></script>
-</body>
+//add 'Reset Filters' button dynamically
+const resetButton = document.createElement('button');
+resetButton.textContent = 'Reset Filters';
+resetButton.id = 'reset-filters-button';
+resetButton.style.display = 'none'; 
+dropdownMenu.prepend(resetButton); // Prepend the button to the menu
+
+//apply styling to the reset button
+resetButton.style.marginBottom = '10px';
+resetButton.style.marginTop = '10px';
+resetButton.style.padding = '10px 20px';
+resetButton.style.fontSize = '1rem';
+resetButton.style.border = 'none';
+resetButton.style.borderRadius = '8px';
+resetButton.style.backgroundColor = 'var(--primary-color)';
+resetButton.style.color = 'white';
+resetButton.style.cursor = 'pointer';
+resetButton.style.marginLeft = 'auto';
+resetButton.style.marginRight = 'auto';
+resetButton.style.textAlign = 'center';
+
+//add hover effect to Reset button
+resetButton.addEventListener('mouseenter', () => {
+    resetButton.style.backgroundColor = 'var(--hover-color)';
+});
+resetButton.addEventListener('mouseleave', () => {
+    resetButton.style.backgroundColor = 'var(--primary-color)';
+});
+
+//ppen/close dropdown menu
+dropdownButton.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('hidden');
+});
+
+const pinnedKeywords = ['Python', 'Java', 'JavaScript', 'C', 'C#'];
+
+//add keywords dynamically
+const keywordsSet = new Set();
+projects.forEach(project => {
+    const keywordsElement = project.querySelector('.keyword');
+    if (keywordsElement) {
+        const keywordsText = keywordsElement.textContent.replace('Keywords:', '').trim();
+        const keywords = keywordsText.split(',').map(keyword => keyword.trim());
+        keywords.forEach(keyword => keywordsSet.add(keyword));
+    }
+});
+
+const allKeywords = Array.from(keywordsSet);
+
+//separate pinned keywords and others
+const pinnedKeywordsSet = new Set(pinnedKeywords); // Use a Set for fast lookup
+const pinned = allKeywords.filter(keyword => pinnedKeywordsSet.has(keyword));
+const nonPinned = allKeywords.filter(keyword => !pinnedKeywordsSet.has(keyword));
+
+//sort non-pinned keywords alphabetically
+const sortedNonPinned = nonPinned.sort();
+
+//combine pinned and non-pinned keywords
+const sortedKeywords = [...pinned, ...sortedNonPinned];
+
+//add the keywords to the dropdown menu
+sortedKeywords.forEach(keyword => {
+    const li = document.createElement('li');
+    const button = document.createElement('button');
+    button.textContent = keyword;
+
+    button.dataset.keyword = keyword;
+    li.appendChild(button);
+    filterKeywordsList.appendChild(li);
+});
 
 
-</html>
+filterKeywordsList.addEventListener('click', (e) => {
+    if (e.target.tagName === 'BUTTON') {
+        const selectedKeyword = e.target.dataset.keyword;
+        const isActive = e.target.classList.toggle('active');
+
+
+        const activeButtons = filterKeywordsList.querySelectorAll('button.active');
+        const activeKeywords = Array.from(activeButtons).map(button => button.dataset.keyword);
+
+
+        projects.forEach(project => {
+            const keywordsElement = project.querySelector('.keyword');
+            if (keywordsElement) {
+                const keywordsText = keywordsElement.textContent.replace('Keywords:', '').trim();
+                const projectKeywords = keywordsText.split(',').map(keyword => keyword.trim());
+
+                const matches = activeKeywords.some(activeKeyword =>
+                    projectKeywords.includes(activeKeyword)
+                );
+
+                
+                if (matches || activeKeywords.length === 0) {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
+            }
+        });
+
+        //show the reset filters button when any filter is active
+        if (activeButtons.length > 0) {
+            resetButton.style.display = 'block';
+        } else {
+            resetButton.style.display = 'none';
+            projects.forEach(project => {
+                project.style.display = 'block';
+            });
+        }
+    }
+});
+
+
+resetButton.addEventListener('click', () => {
+
+    const activeButtons = filterKeywordsList.querySelectorAll('button.active');
+    activeButtons.forEach(button => button.classList.remove('active'));
+
+
+    projects.forEach(project => {
+        project.style.display = 'block';
+    });
+
+
+    resetButton.style.display = 'none';
+});
