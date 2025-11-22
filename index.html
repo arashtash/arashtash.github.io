@@ -161,6 +161,7 @@
                             <p>Rayleigh Solar Tech</p>
                             <p class="date">01/2025 - Present</p>
                         </div>
+                        <p>Developed and enhanced software used to automate lab procedures at a solar technology startup. Built new Python applications and improved existing tools to support automated testing, data collection, and onboarding operations. Refactored codebases for maintainability, designed user-friendly interfaces for non-technical users, and integrated applications with lab hardware such as cameras and testing equipment. Collaborated closely with scientists and engineers to gather requirements, troubleshoot device-related issues, and ensure software reliability. Contributed to improving internal productivity by automating manual processes and lab operations.</p>
                     </div>
                     <div class="experience-item">
                         <div class="experience-header">
@@ -219,7 +220,7 @@
                 
                     <div class="project-card">
                         <h3>Computationally Lightweight Human Motion Generation</h3>
-                        <p>A confrence paper currently submitted at the <a href="https://iclr.cc">ICLR 2025</a> involving a computationally lightweight diffusion model achieving realistic human motion generation, developed in collaboration with a group of researchers at the University of British Columbia (UBC) under the supervision of <a href="https://scholar.google.com/citations?hl=en&user=bl8U3JoAAAAJ">Dr. Peyman Servati</a> and <a href="https://scholar.google.ca/citations?user=W75uTm8AAAAJ&hl=en">Dr. Z. Jane Wang</a>.</p>
+                        <p>Developed a diffusion-based model for realistic and computationally efficient human motion generation in collaboration with UBC researchers, supervised by <a href="https://scholar.google.com/citations?hl=en&user=bl8U3JoAAAAJ">Dr. Peyman Servati</a> and <a href="https://scholar.google.ca/citations?user=W75uTm8AAAAJ&hl=en">Dr. Z. Jane Wang</a>. The work resulted in a collaboratively authored research paper, currently published as an <a href="https://arxiv.org/html/2501.16778v1">arXiv preprint</a>. Contributions included assisting with model design, implementation, and quantitative/qualitative evaluation of generated motion sequences.</p>
                     </div>
                 </section>
 
@@ -248,7 +249,7 @@
                 <section id="resume">
                     <h2>Resume</h2>
                     <div class="resume-download">
-                        <a href="resume.pdf" download class="download-btn">Download Resume</a>
+                        <a href="#" download class="download-btn" id="resumeBtn">Download Resume</a>
                     </div>
                 </section>
 
@@ -582,6 +583,38 @@
     </section>
 
     <!--PROJECTS LIST PAGE ENDS-->
+
+
+    <div id="resumeModal" class="resume-modal">
+        <div class="resume-modal-content">
+            <span class="resume-close">&times;</span>
+            <h3>Resume Update</h3>
+            <p>The latest version of my resume is not available yet. Please check back soon!</p>
+        </div>
+    </div>
+
+                    <script>
+                        const resumeBtn = document.getElementById("resumeBtn");
+                        const resumeModal = document.getElementById("resumeModal");
+                        const resumeClose = document.querySelector(".resume-close");
+                    
+                        resumeBtn.onclick = (e) => {
+                            e.preventDefault(); // prevent download
+                            resumeModal.style.display = "block";
+                        };
+                    
+                        resumeClose.onclick = () => {
+                            resumeModal.style.display = "none";
+                        };
+                    
+                        window.onclick = (e) => {
+                            if (e.target === resumeModal) {
+                                resumeModal.style.display = "none";
+                            }
+                        };
+                    </script>
+
+
 
 
 
