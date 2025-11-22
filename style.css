@@ -1001,3 +1001,48 @@ footer {
 #filter-dropdown-menu::-webkit-scrollbar-track {
     background-color: #f0f0f0;
 }
+
+
+
+
+
+
+
+
+
+/*Temporary resume unavailable modal*/
+.resume-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(4px);
+}
+
+.resume-modal-content {
+    background: white;
+    width: 340px;
+    max-width: 90%;
+    margin: 12% auto;
+    padding: 22px 28px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    animation: resumeSlideIn 0.3s ease-out;
+}
+
+.resume-close {
+    float: right;
+    font-size: 22px;
+    cursor: pointer;
+    color: #666;
+}
+
+.resume-close:hover {
+    color: #222;
+}
+
+@keyframes resumeSlideIn {
+    from { transform: translateY(-10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
