@@ -531,6 +531,18 @@
             </div>
 
 
+            <div class="project-item-full">
+                <div class="project-header">
+                    <h3>Multithreaded OS Process and Messaging Simulator</h3>
+                </div>
+                <div class="project-description">
+                    <p>This project implements a multithreaded operating systems simulator that models process scheduling, CPU time management, and inter-process communication. Each CPU node is represented by a thread that executes multiple processes with primitives such as computation (DOOP), blocking (BLOCK), looping (LOOP), and synchronous message passing (SEND/RECV). The simulator handles preemptive scheduling using a configurable CPU quantum, uses ready and blocked queues to keep track of the processes, and tracks statistics about processes including execution time, wait time, block time, and message operations. A two-phase barrier synchronizes threads at key points to ensure correct concurrent execution, while message passing is implemented with deadlock prevention and ordered delivery per node. The simulation provides a detailed summary of process execution when completed, allowing evaluation of scheduling strategies and communication behaviour.</p>
+                    <p>The project was developed entirely in C, using POSIX threads (pthreads) for concurrency and mutexes and condition variables for synchronization. It follows Test-Driven Development (TDD), ensuring correctness and reliability through automated tests. The codebase is modular, separating context management, process scheduling, barriers, and message passing into independent components to improve maintainability and clarity. This project shows a deep understanding of operating system concepts such as multithreading, synchronization, process lifecycle management, and inter-process communication, while also highlighting low-level systems programming skills.</p>
+                    <a href="https://github.com/arashtash/OS-Process-Simulator" target="_blank">Multithreaded OS Process Simulator's code on GitHub.</a>
+                    <p class="keyword"><strong>Keywords</strong>: C, Operating Systems, Systems Programming, Test-Driven Development, Object-Oriented Programming, Data Structures, Pthreads</p>
+                </div>
+            </div>
+            
 
             <div class="project-item-full">
                 <div class="project-header">
