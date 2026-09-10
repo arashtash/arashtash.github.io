@@ -149,22 +149,6 @@ document.querySelectorAll('.project-item-full').forEach(project => {
 
 
 
-document.getElementById('defaultMode').addEventListener('click', function() {
-    document.body.classList.remove('tritanopia');
-});
-
-document.getElementById('tritanopiaMode').addEventListener('click', function() {
-    document.body.classList.add('tritanopia');
-});
-document.getElementById('defaultModeb').addEventListener('click', function() {
-    document.body.classList.remove('tritanopia');
-});
-
-document.getElementById('tritanopiaModeb').addEventListener('click', function() {
-    document.body.classList.add('tritanopia');
-});
-
-
 // Filtering projects:
 const dropdownButton = document.getElementById('filter-dropdown-button');
 const dropdownMenu = document.getElementById('filter-dropdown-menu');
@@ -300,4 +284,3 @@ resetButton.addEventListener('click', () => {
     //hide the reset filters button
     resetButton.style.display = 'none';
 });
-

@@ -4,16 +4,6 @@
 // Author : Arash Tashakori
 // © 2024 Arash Tashakori. All rights reserved.
 
-// color switching
-document.getElementById('defaultModeb').addEventListener('click', function () {
-    document.body.classList.remove('tritanopia');
-});
-
-document.getElementById('tritanopiaModeb').addEventListener('click', function () {
-    document.body.classList.add('tritanopia');
-});
-
-
 //add expand and collapse option for project item descriptions
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.project-item-full').forEach(project => {
